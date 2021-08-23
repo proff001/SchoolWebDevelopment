@@ -20,10 +20,14 @@
                 Veniam tempor voluptate in ad nulla exercitation irure incididunt qui. 
                 Amet quis id culpa nulla. Ut in cillum exercitation non qui quis ea sint exercitation exercitation. 
                 Enim reprehenderit sunt cillum Lorem reprehenderit aliqua minim culpa.
+                
             </p>
         </div>
 
-        <a href="./Oblig/1">Oblig 1</a>
-        <a href="https://github.com/proff001">Github</a>
+        <ul>
+            <li><a href="https://github.com/proff001">Github</a></li>
+            <li><a href="./Oblig/1">Oblig 1</a></li>
+            <li><a href="./Oblig/2">Oblig 2</a></li>
+        </ul>
     </body>
 </html>
