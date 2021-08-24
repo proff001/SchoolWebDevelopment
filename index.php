@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8">
         <title>Tittel???</title>
-        <link rel="stylesheet" href="./style.css">
+        <!-- Aparently normal would not work 🤔 -->
+        <!-- <link rel="stylesheet" href="./style.css"> -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./style.css?<?=filemtime("./style.css")?>"/>
     </head>
     <body>
-        <text id="title">Overskrit</text>
+        <div id="header">
+            <text id="title">Overskrift</text>
+            <div id="menuItem" class="flexAlignCenter"><a href="">Hjem</a></div>
+            <div id="menuItem" class="flexAlignCenter">Oblig</div>
+            <div id="menuItem" class="flexAlignCenter">Hmm 3</div>
+            <div id="menuItem" class="flexAlignCenter">Hmm 4</div>
+        </div>
+        <div id="container" class="ClassName EnAnnenClass HMMClass">
+        </div>
         <!-- <img src="" alt=""> -->
-        
+
         <!-- Litt om meg -->
         <div>
             <p>
@@ -20,7 +31,6 @@
                 Veniam tempor voluptate in ad nulla exercitation irure incididunt qui. 
                 Amet quis id culpa nulla. Ut in cillum exercitation non qui quis ea sint exercitation exercitation. 
                 Enim reprehenderit sunt cillum Lorem reprehenderit aliqua minim culpa.
-                
             </p>
         </div>
 
