@@ -22,32 +22,44 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     height: 60px;
     display: grid;
-    grid-template-columns: 5fr 1fr 1fr 1fr 1fr;  
-    user-select: none;
+    grid-template-columns: 1fr 2fr;  
+    user-select: none;    
+}
+
+#title {
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#navBar {
+    display: flex;
+    justify-content: flex-end;
     
-    #title {
-        color: rgba(255, 255, 255, 0.8);
-        display: flex;
-        align-items: center;
-        padding-left: 16px;
-        font-size: 32px;
-        font-weight: bold;
-    }
-    
-    #menuItem {
+    .menuItem {
+        min-width: 100px;
         color: rgba(255, 255, 255, 0.8);
         font-size: 20px;
+        
         a {
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
         }
     }
     
-    #menuItem:hover {
+    .menuItem:hover {
         background-color: rgb(201, 201, 201);
     }
 }
 
-#container {
+
+#content {
     
 }   
+
+#footer {
+
+}

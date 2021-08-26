@@ -11,33 +11,40 @@
     <body>
         <div id="header">
             <text id="title">Overskrift</text>
-            <div id="menuItem" class="flexAlignCenter"><a href="">Hjem</a></div>
-            <div id="menuItem" class="flexAlignCenter">Oblig</div>
-            <div id="menuItem" class="flexAlignCenter">Hmm 3</div>
-            <div id="menuItem" class="flexAlignCenter">Hmm 4</div>
+            <div id="navBar">
+                <div class="flexAlignCenter menuItem"><a href="">Hjem</a></div>
+                <div class="flexAlignCenter menuItem"><a href="./Oblig/">Oblig</a></div>
+                <!-- <div class="flexAlignCenter menuItem">Hmm 3</div>
+                <div class="flexAlignCenter menuItem">Hmm 4</div> -->
+            </div>
         </div>
-        <div id="container" class="ClassName EnAnnenClass HMMClass">
-        </div>
-        <!-- <img src="" alt=""> -->
+        <div id="content">
+            <div>
+                <p>
+                    Minim quis dolore consectetur reprehenderit consequat proident occaecat qui. 
+                    Ut veniam incididunt ut ex. Veniam incididunt incididunt veniam eiusmod labore consequat amet dolor culpa. 
+                    Mollit anim aute labore velit pariatur deserunt tempor voluptate nulla qui aute ipsum do dolor. 
+                    Ex consectetur ad culpa deserunt quis. In pariatur pariatur ipsum ad fugiat voluptate ipsum ipsum velit aute tempor. 
+                    Amet reprehenderit eu ipsum est.Sint ipsum laboris ex mollit ipsum cupidatat. 
+                    Veniam tempor voluptate in ad nulla exercitation irure incididunt qui. 
+                    Amet quis id culpa nulla. Ut in cillum exercitation non qui quis ea sint exercitation exercitation. 
+                    Enim reprehenderit sunt cillum Lorem reprehenderit aliqua minim culpa.
+                </p>
+            </div>
 
-        <!-- Litt om meg -->
-        <div>
-            <p>
-                Minim quis dolore consectetur reprehenderit consequat proident occaecat qui. 
-                Ut veniam incididunt ut ex. Veniam incididunt incididunt veniam eiusmod labore consequat amet dolor culpa. 
-                Mollit anim aute labore velit pariatur deserunt tempor voluptate nulla qui aute ipsum do dolor. 
-                Ex consectetur ad culpa deserunt quis. In pariatur pariatur ipsum ad fugiat voluptate ipsum ipsum velit aute tempor. 
-                Amet reprehenderit eu ipsum est.Sint ipsum laboris ex mollit ipsum cupidatat. 
-                Veniam tempor voluptate in ad nulla exercitation irure incididunt qui. 
-                Amet quis id culpa nulla. Ut in cillum exercitation non qui quis ea sint exercitation exercitation. 
-                Enim reprehenderit sunt cillum Lorem reprehenderit aliqua minim culpa.
-            </p>
+            <ul>
+                <li><a href="https://github.com/proff001">Github</a></li>
+                <li><a href="./Oblig/1">Oblig 1</a></li>
+                <li><a href="./Oblig/2">Oblig 2</a></li>
+            </ul>
         </div>
 
-        <ul>
-            <li><a href="https://github.com/proff001">Github</a></li>
-            <li><a href="./Oblig/1">Oblig 1</a></li>
-            <li><a href="./Oblig/2">Oblig 2</a></li>
-        </ul>
+        <div id="footer">
+
+        </div>
+
+        <script>
+            
+        </script>
     </body>
 </html>
