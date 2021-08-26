@@ -6,24 +6,31 @@
     font-weight: normal;
     box-sizing: border-box;
     color: rgb(26, 26, 26);
+    overflow-x: hidden;
 }
 
 body {
+    // display: grid;
+    // grid-template-rows: 1fr 12fr 1fr;
+    // overflow: hidden;
+    width: 100vw;
+    height: 100vh;
     background-color: rgb(200, 200, 200);
 }
 
 #header {
+    width: 100%;
     user-select: none;
     overflow: hidden;
     background-color: rgb(12, 12, 12);
-    height: 50px;
+    height: 5.5vh;
 
     a {
         float: right;
         font-size: 18px;
         display: block;
         text-align: center;
-        padding: 14px 20px;
+        padding: 1.7vh 2.4vh;
         color: rgba(255, 255, 255, 0.8);
         text-decoration: none;
     }
@@ -54,16 +61,22 @@ body {
 }
 
 .sticky {
-    position: fixed;
     top: 0;
+    position: fixed;
     width: 100%;
-}
-  
-.sticky + #content {
-    padding-top: 60px;
+    padding-top: 5.5vh;
 }
 
 #content {
+    min-height: 89vh;
+    position: inherit;
+    padding-top: 5.5vh;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     p {
         font-size: 18px;
     }
@@ -73,11 +86,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
     width: 100%;
-    bottom: 0;
-    left: 0;
-    height: 50px;
+    height: 5.5vh;
     background-color: rgb(12, 12, 12);
     color: rgba(255, 255, 255, 0.8);
 }
