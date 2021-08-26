@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Obliger</title>
+        <!-- Aparently normal would not work 🤔 -->
+        <!-- <link rel="stylesheet" href="./style.css"> -->
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="../style.css?<?=filemtime("../style.css")?>"/>
@@ -9,10 +11,10 @@
     <body>
         <div id="header">
             <text id="title">Thomas's Websted</text>
-            <a href="">Contact</a>                
             <a class="active" href="">Obliger</a>
             <a href="../">Hjem</a>
         </div>
+        
         <div id="content">
 
         </div>
