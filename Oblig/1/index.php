@@ -160,7 +160,7 @@
                     <img src="./img/internal_css.png" alt="Intern style tag">
                     
                     <li>Inline Style</li>
-                    <ul>Inline stylen overskriver den interne style tagen.</ul>
+                    <ul>Inline stylen overskriver den interne og eksterne style tagen.</ul>
                     <img src="./img/inline_css.png" alt="Intern style tag">
                     
                     <li><a href="../style.css">Samlet CSS fil for alle oppgaver/obliger i fremtiden inkl. oblig 1.</a></li>
