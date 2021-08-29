@@ -82,13 +82,10 @@ body {
 }
 
 #content {
-  min-height: 90vh;
+  min-height: 95vh;
   padding-top: 10vh;
   padding-bottom: 5vh;
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

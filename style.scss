@@ -9,9 +9,6 @@
 }
 
 body {
-    // display: grid;
-    // grid-template-rows: 1fr 12fr 1fr;
-    // overflow: hidden;
     background-color: rgb(200, 200, 200);
 }
 
@@ -75,11 +72,10 @@ body {
 }
 
 #content {
-    min-height: 90vh;
+    min-height: 95vh;
     padding-top: 10vh;
     padding-bottom: 5vh;
     width: 100%;
-    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
