@@ -10,12 +10,11 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   background-color: #c8c8c8;
 }
 
 #header {
+  position: fixed;
   width: 100%;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -26,40 +25,41 @@ body {
   height: 5vh;
 }
 
-#header div {
+#header .menuItem {
   float: right;
   height: 100%;
   width: 12vh;
 }
 
-#header div a {
+#header .menuItem a {
   width: 100%;
   height: 100%;
   font-size: 1.8vh;
   text-decoration: none;
 }
 
-#header div.active {
+#header .menuItem.active {
   background-color: #04AA6D;
 }
 
-#header div.active a {
+#header .menuItem.active a {
   color: white;
 }
 
-#header div:hover {
+#header .menuItem:hover {
   background-color: #c8c8c8;
 }
 
-#header div:hover a {
+#header .menuItem:hover a {
   color: #1a1a1a;
 }
 
 #header #title {
+  height: 100%;
   float: left;
   color: rgba(255, 255, 255, 0.8);
   padding-left: 16px;
-  font-size: 28px;
+  font-size: 2.8vh;
   font-weight: bold;
 }
 
@@ -79,14 +79,12 @@ body {
   top: 0;
   position: fixed;
   width: 100%;
-  padding-top: 5.5vh;
 }
 
 #content {
   min-height: 90vh;
-  position: inherit;
-  padding-top: 5.5vh;
-  padding-bottom: 5.5vh;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
