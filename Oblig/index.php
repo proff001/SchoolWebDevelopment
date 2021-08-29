@@ -7,37 +7,52 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="../style.css?<?=filemtime("../style.css")?>"/>
+        <style>
+            #container {
+                width: fit-content;
+                padding: 4vh;
+            }
+            
+            ul {
+                list-style: none;
+            }
+            
+            ol {
+                list-style-type: decimal;
+                list-style-position: inside;
+                padding: 0.5vh 0vh 2vh 3vh;;
+            }
+        </style>
     </head>
     <body>
         <div id="header">
-            <text id="title">Thomas's Websted</text>
-            <a class="active" href="">Obliger</a>
-            <a href="../">Hjem</a>
+            <div id="title" class="flexAlignCenter">Thomas's Websted</div>
+            <div class="menuItem flexAlignCenter"><a class="flexAlignCenter" href="https://github.com/proff001">Github</a></div>
+            <div class="menuItem flexAlignCenter active"><a class="flexAlignCenter" href="">Obliger</a></div>
+            <div class="menuItem flexAlignCenter"><a class="flexAlignCenter" href="../">Hjem</a></div>
         </div>
         
         <div id="content">
-
+            <div id="container">
+                <ul>
+                    <li>
+                        <a href="./1">Oblig 1</a>
+                        <ol>
+                            <li><a href="../">Startside for mine web-prosjekter</a></li>
+                            <li>Deloppgaver</li>
+                            <li>Eksternt Style Sheet</li>
+                            <li>Internt style sheet</li>
+                            <li>Inline style</li>
+                            <li><a href="../style.css">Samlet CSS fil for oppgavene</a></li>
+                        </ol>
+                        <a href="./Template">Template</a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <div id="footer">
             &#169;2021 Thomas Meller Hole
         </div>
-
-        <script>
-            let header = document.getElementById('header');
-            let sticky = header.offsetTop;
-
-            function navBarSticky() {
-                if (window.pageYOffset >= sticky) {
-                    header.classList.add("sticky")
-                } else {
-                    header.classList.remove("sticky");
-                }
-            };
-
-            window.onscroll = () => navBarSticky();
-        </script>
     </body>
-
-    <body>
 </html>
