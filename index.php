@@ -2,11 +2,9 @@
 <html>
     <head>
         <title>Hjemmeside</title>
-        <!-- Aparently normal would not work 🤔 -->
-        <!-- <link rel="stylesheet" href="./style.css"> -->
+        <link rel="stylesheet" href="./style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="./style.css?<?=filemtime("./style.css")?>"/>
         <style>
             #container {
                 width: 68vw;
