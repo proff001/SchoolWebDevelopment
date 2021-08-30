@@ -15,9 +15,7 @@
             }
             
             #pfp {
-                width: 100%;
                 max-width: 100%;
-                height: 100%;
                 max-height: 100%;
                 object-fit: contain;
                 padding: 0.2vh;
@@ -42,6 +40,7 @@
             <div id="container">
                 <img src="./img/pfp.png" alt="Bildet av meg!" id="pfp">
                 <p id="about">
+                    Placeholder tekst (Lorem Ipsum).
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias sint tempore sed facere non rem ut necessitatibus modi, illum, quis cumque. Molestiae non eius veniam voluptatibus eaque consequatur corrupti!
                     Eaque voluptatem quisquam ducimus nisi, voluptas voluptatum. Enim repudiandae facere doloribus expedita illo! Totam, ratione fuga praesentium sapiente perspiciatis earum commodi dolorum cupiditate debitis quae quis ipsam consequuntur, reiciendis aliquam?
                     Quibusdam ipsam saepe in voluptatum ratione explicabo rerum impedit, quam veritatis dolorem odit ullam praesentium voluptatem quaerat natus nihil commodi minus! Adipisci facere ullam quidem iste laborum ducimus praesentium corrupti!
