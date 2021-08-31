@@ -45,6 +45,11 @@
                             <li>Inline style</li>
                             <li><a href="../style.css">Samlet CSS fil for oppgavene</a></li>
                         </ol>
+                        <a href="./2">Oblig 2</a>
+                        <ol>
+                            <li><a href="./2/Oppgave/1">Tilbakemelding</a></li>
+                            <li><a href="./2/Oppgave/2">BMI-Kalkulator</a></li>
+                        </ol>
                         <a href="./Template">Template</a>
                     </li>
                 </ul>

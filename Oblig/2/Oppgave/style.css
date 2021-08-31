@@ -1,0 +1,80 @@
+#container {
+  padding: 4vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.2vh;
+}
+
+#container #title {
+  font-weight: bold;
+  font-size: 2vh;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8;
+  gap: 1vh;
+}
+
+form input {
+  padding: 0.2vh;
+  width: 98%;
+  margin: auto;
+  background: transparent;
+  border-radius: 0.4vh;
+  border-width: 0.1vh;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+form input:focus {
+  border-color: rgba(103, 62, 207, 0.8);
+}
+
+form textarea {
+  padding: 0.2vh;
+  width: 98%;
+  margin: auto;
+  background: transparent;
+  border-radius: 0.4vh;
+  border-width: 0.1vh;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.4);
+  resize: none;
+}
+
+form textarea:focus {
+  border-color: rgba(103, 62, 207, 0.8);
+}
+
+form input[type="submit"] {
+  font-size: 1.8vh;
+  height: 3vh;
+}
+
+form input[type="submit"]:hover {
+  border-color: rgba(103, 62, 207, 0.8);
+}
+
+.wrong-border {
+  border-color: #BE2525;
+}
+
+.correct-border {
+  border-color: #6AA84F;
+}
+/*# sourceMappingURL=style.css.map */

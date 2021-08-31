@@ -150,18 +150,18 @@
                             </table>
                         </ul>
                     </ol>
-                    
+
                     <li>Eksternt Style Sheet</li>
                     <img src="./img/external_css.png" alt="Ekstern CSS fil">
-                    
+
                     <li>Internt Style Sheet</li>
                     <ul>Style tagen overskriver den eksterne stylen.</ul>
                     <img src="./img/internal_css.png" alt="Intern style tag">
-                    
+
                     <li>Inline Style</li>
                     <ul>Inline stylen overskriver den interne og eksterne style tagen.</ul>
                     <img src="./img/inline_css.png" alt="Intern style tag">
-                    
+
                     <li><a href="../style.css">Samlet CSS fil for alle oppgaver/obliger i fremtiden inkl. oblig 1.</a></li>
                 </ol>
             </div>
