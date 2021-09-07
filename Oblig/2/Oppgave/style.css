@@ -67,7 +67,32 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  border-color: rgba(103, 62, 207, 0.8);
+  background-color: rgba(103, 62, 207, 0.7);
+}
+
+form input[type="range"] {
+  width: 23vh;
+  border: 0;
+}
+
+.gender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button:hover {
+  background-color: rgba(103, 62, 207, 0.7);
+}
+
+.active {
+  border-color: rgba(103, 62, 207, 0.7);
 }
 
 .wrong-border {
