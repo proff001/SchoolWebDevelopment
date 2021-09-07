@@ -16,32 +16,13 @@
             <div class="menuItem flexAlignCenter active"><a class="flexAlignCenter" href="../../../">Obliger</a></div>
             <div class="menuItem flexAlignCenter"><a class="flexAlignCenter" href="../../../../">Hjem</a></div>
         </div>
-
-        <?php
-            $navn = $comment = "";
-
-            function jsClass($func, $element, $class) {
-                if($func == 'add') {
-                    echo sprintf('<script>document.getElementById("%").classList.add("%");</script>', $element, $class);
-                } elseif($func == 'remove') {  
-                    echo sprintf('<script>document.getElementById("%").classList.remove("%");</script>', $element, $class);
-                };
-            };
-
-            function safeInput($text) {
-                $text = trim($text);
-                $text = stripslashes($text);
-                $text = htmlspecialchars($text);
-                return $text;
-            };
-        ?>
         
         <div id="content">
             <div id="container" class="flexAlignCenter">
                 <div id="title">Tilbakemelding</div>
-                <form action="feedback.php" method="post">
-                    <input type="text" name="name" placeholder="Navn" style="font-size: 1.8vh;" value="<?php echo $navn; ?>">
-                    <textarea name="msg" cols="50" rows="10" placeholder="Tilbakemelding" style="font-size: 1.8vh;"><?php echo $comment; ?></textarea>
+                <form action="feedback.php" method="post" id="feedback">
+                    <input id="name" type="text" name="name" placeholder="Navn" style="font-size: 1.8vh;">
+                    <textarea id="msg" name="msg" cols="50" rows="10" placeholder="Tilbakemelding" style="font-size: 1.8vh;"></textarea>
                     <input type="submit" name="submit" value="Send inn">
                 </form>
             </div>
@@ -50,5 +31,7 @@
         <div id="footer">
             &#169;2021 Thomas Meller Hole
         </div>
+
+        <script src="./script.js"></script>
     </body>
 </html>
