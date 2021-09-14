@@ -86,32 +86,40 @@
                         <img src="./img/arrayLoop10to40.png" alt="">
                         
                         <li>Lag en løkke som teller hvor mange av tallene som er større enn 10. Antallet tall større enn 10 skal skrives ut når løkka er ferdig</li>
-                        <img src="./img/array.png" alt="">
+                        <img src="./img/arrayLoopOver10.png" alt="">
                         
                         <li>Lag en løkke som beregner summen av alle tallene i arrayen, og skriver den ut til slutt</li>
-                        <img src="./img/array.png" alt="">
+                        <img src="./img/arrayLoopSum.png" alt="">
                         
                         <li>Lag en løkke som beregner gjennomsnittsverdien av alle tallene i arrayen, og skriver den ut til slutt</li>
-                        <img src="./img/array.png" alt="">
+                        <img src="./img/arrayLoopAverage.png" alt="">
                         
                         <li>Lag en løkke som skriver ut alle partall i arrayen</li>
-                        <img src="./img/array.png" alt="">
+                        <img src="./img/arrayLoopEven.png" alt="">
                         
                         <li>Lag en løkke som skriver ut alle oddetall i arrayen</li>
-                        <img src="./img/array.png" alt="">
+                        <img src="./img/arrayLoopOdd.png" alt="">
+                    </ol>
+
+                    <li>Assosiativ Array</li>
+                    <ol class="qAndA">
+                        <li><b>Hvilken fordel er det at man bruker tekst i stedet for et nummer?</b></li>
+                        <ul>Med assosiative arrays så er det enklere å vite hva entriesene er etter nøkkelordet<br> istedenfor å gjette hva indeksen på det du er ute etter er</ul>
+
+                        <li><b>Opprett en assosiativ array som håndterer prøveresultater. Hver elev/prøveresultat skal du ha håndtere følgende egenskaper: fornavn, etternavn, klasse, karakter, tidsforbruk.</b></li>
+                        
                     </ol>
                 </ol>
-
-                <?php 
-                    $arr = array(1,2,3,4,11,12,13,14,21,22,23,24,31,32,33,34,41,42,43,44);
-
-                    foreach($arr as $index => $value) {
-                        if($value > 10 && $value < 40) {
-                            echo "$index -> $value<br>";
-                        }
-                    }
-                ?>
             </div>
+            <?php
+                $arr = array(
+                    "elev1" => array("fornavn" => "Thomas", "etternavn" => "Hole", "klasse" => "3DAA", "karakter" => 5, "tidsforbruk" => 15),
+                    "elev2" => array("fornavn" => "Sander", "etternavn" => "Sundby", "klasse" => "2STD", "karakter" => 1, "tidsforbruk" => 30),
+                    "elev3" => array("fornavn" => "Dag", "etternavn" => "Mørch", "klasse" => "1ELED", "karakter" => 4, "tidsforbruk" => 45),
+                    "elev4" => array("fornavn" => "Sander", "etternavn" => "Bakken", "klasse" => "1STA", "karakter" => 3, "tidsforbruk" => 60),
+                    "elev5" => array("fornavn" => "Marius", "etternavn" => "J.", "klasse" => "3DAA", "karakter" => 6, "tidsforbruk" => 120),
+                );
+            ?>
         </div>
 
         <div id="footer">
