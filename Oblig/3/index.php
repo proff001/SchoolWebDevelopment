@@ -100,26 +100,43 @@
                         <li>Lag en løkke som skriver ut alle oddetall i arrayen</li>
                         <img src="./img/arrayLoopOdd.png" alt="">
                     </ol>
-
+                    
                     <li>Assosiativ Array</li>
                     <ol class="qAndA">
                         <li><b>Hvilken fordel er det at man bruker tekst i stedet for et nummer?</b></li>
-                        <ul>Med assosiative arrays så er det enklere å vite hva entriesene er etter nøkkelordet<br> istedenfor å gjette hva indeksen på det du er ute etter er</ul>
-
-                        <li><b>Opprett en assosiativ array som håndterer prøveresultater. Hver elev/prøveresultat skal du ha håndtere følgende egenskaper: fornavn, etternavn, klasse, karakter, tidsforbruk.</b></li>
+                        <ul>Med assosiative arrays så er det enklere å vite hva entriesene er etter nøkkelordet istedenfor å gjette hva indeksen på det du er ute etter er.</ul>
                         
+                        <!-- <li><b>Opprett en assosiativ array som håndterer prøveresultater. Hver elev/prøveresultat skal du ha håndtere følgende egenskaper: fornavn, etternavn, klasse, karakter, tidsforbruk.</b></li> -->
+                        
+                        <!-- <li><b>Fyll inn fiktive verdier for 5 personer på to ulike måter</b></li> -->
+                    </ol>
+                    
+                    <li>Array generator</li>
+                    <ol class="qAndA">
+                        <li><b>Lag en «array-generator» ved hjelp av en løkke. For hver runde i løkka skal du legge til en ny oppføring som inneholder et tilfeldig tall mellom 0 og 1000. Du skal ha 100 verdier i lista når den er ferdig</b></li>
+                        <img src="./img/arrayGen.png" alt="">
+                        
+                        <li><b>Lag en ny løkke for å iterere arrayen du har laget, og lag kode for å finne ut høyeste verdi</b></li>
+                        <img src="./img/arrayGenHighest.png" alt="">
+                        
+                        <li><b>Lag en ny løkke for å iterere arrayen du har laget, og lag kode for å finne ut minste verdi</b></li>
+                        <img src="./img/arrayGenLowest.png" alt="">
+                        
+                        <li><b>Lag en ny løkke for å iterere arrayen du har laget, og lag kode for å finne ut hvor mange verdier som er mellom 0-499 og hva sier dette om fordelingen</b></li>
+                        <ul>Etter å kjøre koden flere ganger var 40-60 av verdiene under 500 som da vil si at rand funksjonen er ganske grei til å gi ut randome tall. </ul>
+                        <img src="./img/arrayGenUnder500.png" alt="">
+                        
+                        <li><b>Ekstra oppgave: Vurdering av random funksjonen</b></li>
+                        <ul>Etter å ha kjøry koden for å teste flere ganger (nærmere 20-50 ganger) og endte opp med minimum 3 innenfor hver gruppe og maksimum 19 i hver gruppe.</ul>
+                        <img src="./img/arrayRandTest.png" alt="">
+                    </ol>
+
+                    <li>Multidimensjonal array</li>
+                    <ol class="qAndA">
+                        <li><b>Legg inn minimum 10 objekter i arrayen, komplett med alle egenskaper</b></li>
                     </ol>
                 </ol>
             </div>
-            <?php
-                $arr = array(
-                    "elev1" => array("fornavn" => "Thomas", "etternavn" => "Hole", "klasse" => "3DAA", "karakter" => 5, "tidsforbruk" => 15),
-                    "elev2" => array("fornavn" => "Sander", "etternavn" => "Sundby", "klasse" => "2STD", "karakter" => 1, "tidsforbruk" => 30),
-                    "elev3" => array("fornavn" => "Dag", "etternavn" => "Mørch", "klasse" => "1ELED", "karakter" => 4, "tidsforbruk" => 45),
-                    "elev4" => array("fornavn" => "Sander", "etternavn" => "Bakken", "klasse" => "1STA", "karakter" => 3, "tidsforbruk" => 60),
-                    "elev5" => array("fornavn" => "Marius", "etternavn" => "J.", "klasse" => "3DAA", "karakter" => 6, "tidsforbruk" => 120),
-                );
-            ?>
         </div>
 
         <div id="footer">

@@ -45,21 +45,24 @@
                             <li>Inline style</li>
                             <li><a href="../style.css">Samlet CSS fil for oppgavene</a></li>
                         </ol>
+
                         <a href="./2">Oblig 2</a>
                         <ol>
                             <li><a href="./2/Oppgave/1">Tilbakemelding</a></li>
                             <li><a href="./2/Oppgave/2">BMI-Kalkulator</a></li>
                         </ol>
+                        
                         <a href="./3">Oblig 3</a>
                         <ol>
                             <li>True or False</li>
                             <li>True or False</li>
                             <li>Logiske uttrykk</li>
                             <li>Numerisk Array, håndtering med løkker</li>
-                            <li>Oppg 5</li>
-                            <li>Oppg 6</li>
-                            <li>Oppg 7</li>
+                            <li>Assosiativ Array</li>
+                            <li>Array generator</li>
+                            <li>Multidimensjonal array</li>
                         </ol>
+                        
                         <a href="./Template">Template</a>
                     </li>
                 </ul>
