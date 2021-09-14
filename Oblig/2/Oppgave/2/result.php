@@ -2,14 +2,13 @@
 <html>
     <head>
         <title>Tilbakemelding</title>
-        <!-- <link rel="stylesheet" href="../../style.css"> -->
+        <link rel="stylesheet" href="../../../../style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-        <!-- Keeping for when i am developing further to avoid caching -->
-        <link rel="stylesheet" href="../../../../style.css?<?=filemtime("../../../../style.css")?>"/>
         <style>
             #container {
                 padding: 4vh;
+                flex-direction: column;
             }
             
             ul {
@@ -58,9 +57,9 @@
                 if($BMI <= 18.5) {
                     $msg = ($male) ? "Flytt til amerika!" : "Ta deg en roadtrip i amerika.";
                 } elseif($BMI > 18.5 && $BMI <= 25) {
-                    $msg = ($male) ? "Du blir aldri bra nok!" : "";
+                    $msg = ($male) ? "Du blir aldri bra nok!" : "Perfect!";
                 } elseif($BMI > 25 && $BMI <= 30) {
-                    $msg = ($male) ? "Flytt hjem fra amerika!" : ".";
+                    $msg = ($male) ? "Flytt hjem fra amerika!" : "";
                 } elseif($BMI < 30) {
                     $msg = ($male) ? "Begynn med heroin!" : "";
                 };

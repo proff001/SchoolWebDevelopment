@@ -5,8 +5,6 @@
         <link rel="stylesheet" href="../../style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-        <!-- Keeping for when i am developing further to avoid caching -->
-        <!-- <link rel="stylesheet" href="../../style.css?<?=filemtime("../../style.css")?>"/> -->
         <style>
             #container {
                 width: fit-content;
@@ -42,7 +40,7 @@
                     <br>
 
                     <li>Deloppgaver</li>
-                    <ol class="qAndA" style="list-style-type: lower-latin;">
+                    <ol class="qAndA">
                         <li><b>Hva er en kommentar og hvordan kan vi legge det inn i et dokument? Vis med kodeeksempler</b></li>
                         <ul>Kommentarer er rett og slet tekst som ikke blir vist eller brukt av end-user, men av de som har tillgang til source koden.<br>En kommentar i html/php har en start prefix "!<--" og en slutt prefix "-->" hvor alt innenfor prefixene er kommentaren.</ul>
                         <img src="./img/kommentar.jpg" alt="Kode eksempel">
