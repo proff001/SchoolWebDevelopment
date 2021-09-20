@@ -106,9 +106,11 @@
                         <li><b>Hvilken fordel er det at man bruker tekst i stedet for et nummer?</b></li>
                         <ul>Med assosiative arrays så er det enklere å vite hva entriesene er etter nøkkelordet istedenfor å gjette hva indeksen på det du er ute etter er.</ul>
                         
-                        <!-- <li><b>Opprett en assosiativ array som håndterer prøveresultater. Hver elev/prøveresultat skal du ha håndtere følgende egenskaper: fornavn, etternavn, klasse, karakter, tidsforbruk.</b></li> -->
+                        <li><b>Opprett en assosiativ array som håndterer prøveresultater. Hver elev/prøveresultat skal du ha håndtere følgende egenskaper: fornavn, etternavn, klasse, karakter, tidsforbruk.</b></li>
+                        <img src="./img/assoArray.png" alt="">
                         
-                        <!-- <li><b>Fyll inn fiktive verdier for 5 personer på to ulike måter</b></li> -->
+                        <li><b>Fyll inn fiktive verdier for 5 personer på to ulike måter</b></li>
+                        <img src="./img/assoArray5Entries.png" alt="">
                     </ol>
                     
                     <li>Array generator</li>
@@ -123,19 +125,59 @@
                         <img src="./img/arrayGenLowest.png" alt="">
                         
                         <li><b>Lag en ny løkke for å iterere arrayen du har laget, og lag kode for å finne ut hvor mange verdier som er mellom 0-499 og hva sier dette om fordelingen</b></li>
-                        <ul>Etter å kjøre koden flere ganger var 40-60 av verdiene under 500 som da vil si at rand funksjonen er ganske grei til å gi ut randome tall. </ul>
+                        <ul>Etter å kjøre koden flere ganger var 40-60 av verdiene under 500 som da vil si at fordelingen på rand funksjonen er ganske bra</ul>
                         <img src="./img/arrayGenUnder500.png" alt="">
                         
                         <li><b>Ekstra oppgave: Vurdering av random funksjonen</b></li>
-                        <ul>Etter å ha kjøry koden for å teste flere ganger (nærmere 20-50 ganger) og endte opp med minimum 3 innenfor hver gruppe og maksimum 19 i hver gruppe.</ul>
+                        <ul>Etter å ha kjøry koden for å teste flere ganger (20-50 ganger) og endte opp med minimum 3 innenfor hver gruppe og maksimum 19 i hver gruppe.</ul>
                         <img src="./img/arrayRandTest.png" alt="">
                     </ol>
-
+                    
                     <li>Multidimensjonal array</li>
                     <ol class="qAndA">
                         <li><b>Legg inn minimum 10 objekter i arrayen, komplett med alle egenskaper</b></li>
+                        
+                        <li><b>Lag en variabel som teller antall elementer i arrayen din</b></li>
+                        <img src="./img/mArraySize.png" alt="">
+
+                        <li><b>Lag en løkke som traverserer arrayen din og skriver ut alle egenskaper pent formattert</b></li>
                     </ol>
                 </ol>
+                <?php
+
+                    $arr = array(
+                        "stackoverflow.com" => array("svar på det mesta av feil", "må vær forsiktig med å spøre spørsmål", ""),
+                        "Musikk" => array("avslappene", "konsentrasjon", "fokus"),
+                    );
+
+                    $size = 0;
+
+                    foreach($arr as $index => $value) {
+                        $size += count($value);
+                    }
+
+                    echo $size;
+
+                    echo "<ul>";
+                    
+                    foreach($arr as $index => $value) {
+                        echo "<li>$index</li>";    
+                        echo "<ul>";
+                        
+                        echo "<li><b>Egenskaper:</b></li>";
+                        echo "<ul>";
+                        
+                        foreach($value as $index2 => $value2) {
+                            echo "<li>$value2</li>";
+                        }
+
+                        echo "</ul>";
+                        echo "</ul>";
+                    }
+
+                    echo "</ul>";
+                    
+                ?>
             </div>
         </div>
 
