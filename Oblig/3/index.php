@@ -109,7 +109,7 @@
                         <li><b>Opprett en assosiativ array som håndterer prøveresultater. Hver elev/prøveresultat skal du ha håndtere følgende egenskaper: fornavn, etternavn, klasse, karakter, tidsforbruk.</b></li>
                         <img src="./img/assoArray.png" alt="">
                         
-                        <li><b>Fyll inn fiktive verdier for 5 personer på to ulike måter</b></li>
+                        <li><b>Fyll inn fiktive verdier for 5 personer på to ulike måter</b> (Takk til Marius for å gi meg navn å legge inn)</li>
                         <img src="./img/assoArray5Entries.png" alt="">
                     </ol>
                     
@@ -136,48 +136,15 @@
                     <li>Multidimensjonal array</li>
                     <ol class="qAndA">
                         <li><b>Legg inn minimum 10 objekter i arrayen, komplett med alle egenskaper</b></li>
+                        <img src="./img/mArray.png" alt="Bildet av multidimensjonale arrayen">
                         
                         <li><b>Lag en variabel som teller antall elementer i arrayen din</b></li>
-                        <img src="./img/mArraySize.png" alt="">
-
+                        <img src="./img/mArraySize.png" alt="Bildet av loopen for å telle antall elementes(egenskaper)">
+                        
                         <li><b>Lag en løkke som traverserer arrayen din og skriver ut alle egenskaper pent formattert</b></li>
+                        <img src="./img/mArrayLoop.png" alt="Bildet av loopen for å pent displaye objektene">
                     </ol>
                 </ol>
-                <?php
-
-                    $arr = array(
-                        "stackoverflow.com" => array("svar på det mesta av feil", "må vær forsiktig med å spøre spørsmål", ""),
-                        "Musikk" => array("avslappene", "konsentrasjon", "fokus"),
-                    );
-
-                    $size = 0;
-
-                    foreach($arr as $index => $value) {
-                        $size += count($value);
-                    }
-
-                    echo $size;
-
-                    echo "<ul>";
-                    
-                    foreach($arr as $index => $value) {
-                        echo "<li>$index</li>";    
-                        echo "<ul>";
-                        
-                        echo "<li><b>Egenskaper:</b></li>";
-                        echo "<ul>";
-                        
-                        foreach($value as $index2 => $value2) {
-                            echo "<li>$value2</li>";
-                        }
-
-                        echo "</ul>";
-                        echo "</ul>";
-                    }
-
-                    echo "</ul>";
-                    
-                ?>
             </div>
         </div>
 
