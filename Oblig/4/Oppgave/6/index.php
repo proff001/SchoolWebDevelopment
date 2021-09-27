@@ -20,40 +20,40 @@
         
         <div id="content">
             <div id="container">
-                <div id="title">Tilbakemelding</div>
-                <form action="./" method="post" id="form">
+                <div id="title">Pizzabestilling</div>
+                <form action="order.php" method="post" id="form">
                     <input id="name" type="text" name="name" placeholder="Navn" style="font-size: 1.8vh;">
+                    <input id="address" type="text" name="address" placeholder="Adresse" style="font-size: 1.8vh;">
+                    
+                    <div class="radials">
+                        <div class="radial">
+                            Hente<input type="radio" name="delivery" value="0" checked>
+                        </div>
+                        
+                        <div class="radial">
+                            Levere<input type="radio" name="delivery" value="1">
+                        </div>
+                    </div>
+                    
+                    <select name="type">
+                        <option value="Pepperoni">Pepperoni</option>
+                        <option value="King of the King">King of the King</option>
+                        <option value="Ansjos og Ananas">Ansjos og Ananas</option>
+                    </select>
+                    
+                    <label for="extra">Ekstra Ost:</label>
+                    <div class="radials">
+                        <div class="radial">
+                            Ja<input type="radio" name="extra" value="1">
+                        </div>
+                        
+                        <div class="radial">
+                            Nei<input type="radio" name="extra" value="0" checked>
+                        </div>
+                    </div>
+
                     <input type="submit" name="submit" value="Send inn">
                 </form>
-                
-                <?php
-                    $name = "";
-                    
-                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                        if(!empty($_POST["name"])) $name = safeInput($_POST["name"]);
-                        
-                        echo '<div id="title">Output</div>';
-                        echo "<div>";
-
-                        if(!preg_match("/^[a-å A-Å \s .\-]+$/", $name)) {
-                            $name = "Det var en feil i formatet i tilbakemeldingen din!";
-                            echo $name;
-                        } else {
-                            for($i = 0; $i < 5; $i++) {
-                                echo ($i == 4) ? "$name" : "$name-";
-                            };
-                        };
-                        
-                        echo "</div>";
-                    };
-
-                    function safeInput($text) {
-                        $text = trim($text);
-                        $text = stripslashes($text);
-                        $text = htmlspecialchars($text);
-                        return $text;
-                    };
-                ?>
             </div>
         </div>
 
