@@ -63,6 +63,16 @@
                             <li>Multidimensjonal array</li>
                         </ol>
                         
+                        <a href="./4">Oblig 4</a>
+                        <ol>
+                            <li><a href="./4/Oppgave/1">Oppgave 1</a></li>
+                            <li><a href="./4/Oppgave/2">Oppgave 2</a></li>
+                            <li><a href="./4/Oppgave/3">Oppgave 3</a></li>
+                            <li>Oppgave 4</li>
+                            <li>Oppgave 5</li>
+                            <li><a href="./4/Oppgave/6">Oppgave 6</a></li>
+                        </ol>
+                        
                         <a href="./Template">Template</a>
                     </li>
                 </ul>

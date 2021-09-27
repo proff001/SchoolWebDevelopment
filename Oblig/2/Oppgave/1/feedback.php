@@ -48,10 +48,6 @@
                 $text = htmlspecialchars($text);
                 return $text;
             };
-
-            function validateInput($text) {
-                return true;
-            };
         ?>
         <div id="header">
             <div id="title" class="flexAlignCenter">Thomas's Websted</div>
