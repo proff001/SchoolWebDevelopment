@@ -72,6 +72,18 @@
                             <li>Oppgave 5</li>
                             <li><a href="./4/Oppgave/6">Oppgave 6</a></li>
                         </ol>
+
+                        <a href="./5">Oblig 5</a>
+                        <ol>
+                            <li>Deklarasjon av en funksjon</li>
+                            <li>Lage en funksjon uten argumenten</li>
+                            <li>Lage en funksjon med et argument</li>
+                            <li>Lage en funksjon med to argumenter</li>
+                            <li>Lage en funksjon med flere argumenter</li>
+                            <li>Funksjon: formatterTekst</li>
+                            <li>Rekursive funksjon</li>
+                            <li>Rekursiv funksjon</li>
+                        </ol>
                         
                         <a href="./Template">Template</a>
                     </li>

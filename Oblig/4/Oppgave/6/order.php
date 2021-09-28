@@ -8,6 +8,26 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
         <!-- Keeping for when i am developing further to avoid caching -->
         <link rel="stylesheet" href="../../../../style.css?<?=filemtime("../../../../style.css")?>"/>
+        <link rel="stylesheet" href="../style.css?<?=filemtime("../style.css")?>"/>
+        <style>
+            #container {
+                padding: 4vh;
+                flex-direction: column;
+            }
+            
+            ul {
+                padding: 0.5vh 0vh 1vh 2vh;
+            }
+            
+            ol {
+                list-style-type: decimal;
+                list-style-position: inside;
+            }
+            
+            ol img {
+                padding: 0vh 0vh 1vh 2vh;
+            }
+        </style>
     </head>
     <body>
         <div id="header">
@@ -19,27 +39,33 @@
         
         <div id="content">
             <div id="container">
-                <div id="title">Tilbakemelding</div>
-
                 <?php
-                    $name = "";
+                    $name = $address = $type = "";
+                    $extra = $delivery = false;
                     
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         if(!empty($_POST["name"])) $name = safeInput($_POST["name"]);
+                        if(!empty($_POST["address"])) $address = safeInput($_POST["address"]);
+                        if(!empty($_POST["delivery"])) $delivery = ((safeInput($_POST["delivery"])) == 1) ? true : false;
+                        if(!empty($_POST["type"])) $type = safeInput($_POST["type"]);
+                        if(!empty($_POST["extra"])) $extra = ((safeInput($_POST["extra"])) == 1) ? true : false;
                         
-                        echo '<div id="title">Output</div>';
-                        echo "<div>";
-
-                        if(!preg_match("/^[a-å A-Å \s .\-]+$/", $name)) {
-                            $name = "Det var en feil i formatet i tilbakemeldingen din!";
-                            echo $name;
+                        if(!preg_match("/^[a-å A-Å \s .\-]+$/", $name) || !preg_match("/^[a-å A-Å 0-9 \s .,\-]+$/", $address) || !checkType($type)) {
+                            echo '<div id="title">Feil</div>';
+                            echo 'Det var en feil i formatet i bestilling din!<br>Vennligst prøv å bestille på nytt.<br><a href="./">Tilbake til bestilling</a>';
                         } else {
-                            for($i = 0; $i < 5; $i++) {
-                                echo ($i == 4) ? "$name" : "$name-";
-                            };
+                            echo '<div id="title">Bestilling</div>';
+                            echo "<div>";
+                            echo "Takk for din bestilling $name.<br>";
+                            echo "Du har bestillt en $type";
+                            echo ($extra) ? " med ekstra ost.<br>" : ".<br>";
+                            echo ($delivery) ? "Leveres til $address." : "Hentes hos oss i EnGate 5, 1528 Moss.";
+                            echo "</div>";
                         };
-                        
-                        echo "</div>";
+                    };
+
+                    function checkType($value) {
+                        return ($value == "Pepperoni" || $value == "King of the King" || $value == "Ansjos og Ananas");
                     };
 
                     function safeInput($text) {

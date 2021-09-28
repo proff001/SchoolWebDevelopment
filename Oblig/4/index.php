@@ -38,13 +38,13 @@
             <div id="container">
                 <ol>
                     <li><a href="./Oppgave/1">Oppgave 1</a></li>
-                    <ol><img src="./img/oppg1.png" alt=""></ol>
+                    <ol><img src="./img/oppg1.png" alt="Bilde av php koden til oppgave 1"></ol>
                     
                     <li><a href="./Oppgave/2">Oppgave 2</a></li>
-                    <ol><img src="./img/oppg2.png" alt=""></ol>
+                    <ol><img src="./img/oppg2.png" alt="Bilde av php koden til oppgave 2"></ol>
                     
                     <li><a href="./Oppgave/3">Oppgave 3</a></li>
-                    <ol><img src="./img/oppg3.png" alt=""></ol>
+                    <ol><img src="./img/oppg3.png" alt="Bilde av php koden til oppgave 3"></ol>
                     
                     <li>>Oppgave 4</li>
                     <ol class="qAndA">
@@ -74,7 +74,7 @@
                             echo "</ul>";
                         ?>
                     </ol>
-                    <ol><img src="./img/oppg4.png" alt=""></ol>
+                    <ol><img src="./img/oppg4.png" alt="Bilde av php koden til oppgave 4"></ol>
 
                     <li>Oppgave 5</li>
                     <ol class="qAndA">
@@ -106,10 +106,10 @@
                             echo "</ul>";
                         ?>
                     </ol>
-                    <ol><img src="./img/oppg5.png" alt=""></ol>
+                    <ol><img src="./img/oppg5.png" alt="Bilde av php koden til oppgave 5"></ol>
                     
                     <li><a href="./Oppgave/6">Oppgave 6</a></li>
-                    <ol><img src="./img/oppg5.png" alt=""></ol>
+                    <ol><img src="./img/oppg6.png" alt="Bilde av php koden til oppgave 6"></ol>
                 </ol>
             </div>
         </div>

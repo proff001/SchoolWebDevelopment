@@ -2,13 +2,10 @@
 <html>
     <head>
         <title>Oblig 4 Opgpave 6</title>
-        <!-- <link rel="stylesheet" href="../style.css"> -->
-        <!-- <link rel="stylesheet" href="../../../../style.css"> -->
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../../../../style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-        <!-- Keeping for when i am developing further to avoid caching -->
-        <link rel="stylesheet" href="../../../../style.css?<?=filemtime("../../../../style.css")?>"/>
-        <link rel="stylesheet" href="../style.css?<?=filemtime("../style.css")?>"/>
     </head>
     <body>
         <div id="header">
@@ -27,11 +24,11 @@
                     
                     <div class="radials">
                         <div class="radial">
-                            Hente<input type="radio" name="delivery" value="0" checked>
+                            Levere<input type="radio" name="delivery" value="1">
                         </div>
                         
                         <div class="radial">
-                            Levere<input type="radio" name="delivery" value="1">
+                            Hente<input type="radio" name="delivery" value="0" checked>
                         </div>
                     </div>
                     
