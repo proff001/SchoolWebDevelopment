@@ -62,19 +62,26 @@
                     
                     <li>Funksjon: formatterTekst</li>
                     <ol class="qAndA">
+                        <li><b>Lag funksjonen ferdig</b></li>
+                        <img src="./img/functionTextFormat.png" alt="">
                         
+                        <li><b>Test ut funksjonen med whitespaces, tags og med store bokstaver i midten. Demonstrer at utskrift blir korrekt når input er feil formattert</b></li>
+                        <?php
+                            function formatterTekst($text) {
+                                return ucfirst(strtolower(htmlspecialchars(trim($text))));
+                            };
+
+                            echo "<ul>" . formatterTekst("hmm EN VELDIG FiN SeTNiNG MED hTmL TAGS, WHITE SPACE OG CAPS LOCK") . "</ul>";
+                        ?>
+                        <img src="./img/functionTextFormated.png" alt="">
                     </ol>
                         
                     <li>Rekursive funksjon</li>
-                    <ol><img src="" alt=""></ol>
+                    <ol><img src="./img/functionRecursive.png" alt=""></ol>
                     
                     <li>Rekursiv funksjon</li>
-                    <ol><img src="" alt=""></ol>
+                    <ol><img src="./img/functionRecursive2.png" alt=""></ol>
                 </ol>
-
-                <?php
-                    
-                ?>
             </div>
         </div>
 
