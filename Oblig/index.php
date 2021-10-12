@@ -82,6 +82,14 @@
                             <li>Rekursive funksjon</li>
                             <li>Rekursiv funksjon</li>
                         </ol>
+
+                        <a href="./6">Oblig 6</a>
+                        <ol>
+                            <li><a href="./6/Oppgave/1">Sitater og utskrift fra fil</a></li>
+                            <li><a href="./6/Oppgave/2">Tilfeldig tall</a></li>
+                            <li><a href="./6/Oppgave/3">Legg in data og sende videre til fila</a></li>
+                            <li>Oppgave 4</li>
+                        </ol>
                         
                         <a href="./Template">Template</a>
                     </li>
