@@ -5,8 +5,6 @@
         <link rel="stylesheet" href="../style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-        <!-- Keeping for when i am developing further to avoid caching -->
-        <!-- <link rel="stylesheet" href="../style.css?<?=filemtime("../style.css")?>"/> -->
         <style>
             #container {
                 width: fit-content;
@@ -83,6 +81,14 @@
                             <li>Funksjon: formatterTekst</li>
                             <li>Rekursive funksjon</li>
                             <li>Rekursiv funksjon</li>
+                        </ol>
+
+                        <a href="./6">Oblig 6</a>
+                        <ol>
+                            <li><a href="./6/Oppgave/1">Sitater og utskrift fra fil</a></li>
+                            <li><a href="./6/Oppgave/2">Tilfeldig tall</a></li>
+                            <li><a href="./6/Oppgave/3">Legg in data og sende videre til fila</a></li>
+                            <li>Oppgave 4</li>
                         </ol>
                         
                         <a href="./Template">Template</a>
