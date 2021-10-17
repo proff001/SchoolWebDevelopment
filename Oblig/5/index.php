@@ -71,7 +71,7 @@
                                 return ucfirst(strtolower(htmlspecialchars(trim($text))));
                             };
 
-                            echo "<ul>" . formatterTekst("hmm EN VELDIG FiN SeTNiNG MED hTmL TAGS, WHITE SPACE OG CAPS LOCK") . "</ul>";
+                            echo "<ul>" . formatterTekst("hmm EN VELDIG  FiN    SeTNiNG MED hTmL    TAGS, WHITE SPACE   OG CAPS LOCK") . "</ul>";
                         ?>
                         <img src="./img/functionTextFormated.png" alt="">
                     </ol>
