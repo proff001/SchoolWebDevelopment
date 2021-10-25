@@ -38,8 +38,9 @@
             <div id="container">
                 <ol>
                     <li><a href="./Oppgave/1">Sitater og utskrift fra fil</a></li>
-
-                    <li><a href="./Oppgave/2"></a></li>
+                    <li><a href="./Oppgave/2">Tilfeldig sitat</a></li>
+                    <li><a href="./Oppgave/3">Legg inn data og sende videre til fila</a></li>
+                    <li><a href="./Oppgave/4">Oppgave 4</a></li>
                 </ol>
             </div>
         </div>

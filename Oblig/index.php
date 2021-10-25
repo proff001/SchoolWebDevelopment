@@ -87,8 +87,8 @@
                         <ol>
                             <li><a href="./6/Oppgave/1">Sitater og utskrift fra fil</a></li>
                             <li><a href="./6/Oppgave/2">Tilfeldig tall</a></li>
-                            <li><a href="./6/Oppgave/3">Legg in data og sende videre til fila</a></li>
-                            <li>Oppgave 4</li>
+                            <li><a href="./6/Oppgave/3">Legg inn data og sende videre til fila</a></li>
+                            <li><a href="./6/Oppgave/4">Oppgave 4</a></li>
                         </ol>
                         
                         <a href="./Template">Template</a>

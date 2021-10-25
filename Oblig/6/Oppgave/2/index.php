@@ -14,6 +14,7 @@
                 flex-direction: column;
                 gap: 12px;
                 min-width: 600px;
+                max-width: 800px;
             }
         </style>
     </head>
@@ -36,19 +37,19 @@
                     if(filesize("../sitater.txt") > 0) {
                         $file = fopen("../sitater.txt", "r");
                         
-                        $coutner = 0;
+                        $counter = 0;
                         while(!feof($file)) {
-                            $arr[$coutner] = fgets($file);
-                            $coutner++;
+                            $txt = fgets($file);
+
+                            if(strlen($txt) > 2) {
+                                $arr[$counter] = $txt;
+                                $counter++;
+                            }
                         }
                     
                         fclose($file);
-                    
-                        while(strlen($sitat) < 3) {
-                            $sitat = $arr[rand(0, count($arr)-1)];
-                        }
                         
-                        echo $sitat;
+                        echo $arr[rand(0, count($arr)-1)];
                     } else {
                         echo "<p>Ingen sitater lagret. Gå til Oppgave 1 for å redigere sitater.</p>";
                     }
