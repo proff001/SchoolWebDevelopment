@@ -1,0 +1,9 @@
+Thomas;99
+Karlsen;1
+Juan;40
+Marius J.;5
+Stein;90
+Nils;45
+Kari;34
+Pia;23
+Truls;76

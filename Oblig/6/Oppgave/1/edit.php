@@ -2,12 +2,10 @@
 <html>
     <head>
         <title>Edit Sitat</title>
-        <!-- <link rel="stylesheet" href="../../style.css"> -->
+        <link rel="stylesheet" href="../../../../style.css">
+        <link rel="stylesheet" href="../../../2/Oppgave/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-        <!-- Keeping for when i am developing further to avoid caching -->
-        <link rel="stylesheet" href="../../../../style.css?<?=filemtime("../../../../style.css")?>"/>
-        <link rel="stylesheet" href="../../../2/Oppgave/style.css?<?=filemtime("../../../2/Oppgave/style.css")?>"/>
         <style>
             #container {
                 padding: 4vh;
@@ -59,8 +57,8 @@
         </div>
 
         <script>
-            if ( window.history.replaceState ) {
-                window.history.replaceState( null, null, window.location.href );
+            if(window.history.replaceState) {
+                window.history.replaceState(null, null, window.location.href);
             }
         </script>
     </body>

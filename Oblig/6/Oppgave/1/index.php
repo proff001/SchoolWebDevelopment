@@ -2,11 +2,9 @@
 <html>
     <head>
         <title>Oblig 6 Oppgave 1</title>
-        <!-- <link rel="stylesheet" href="../../style.css"> -->
+        <link rel="stylesheet" href="../../../../style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-        <!-- Keeping for when i am developing further to avoid caching -->
-        <link rel="stylesheet" href="../../../../style.css?<?=filemtime("../../../../style.css")?>"/>
         <style>
             #container {
                 padding: 4vh;

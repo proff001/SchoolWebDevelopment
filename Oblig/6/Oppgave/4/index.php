@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Oblig 6 Oppgave 3</title>
-        <!-- <link rel="stylesheet" href="../../style.css"> -->
+        <title>Oblig 6 Oppgave 4</title>
+        <link rel="stylesheet" href="../../../../style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-        <!-- Keeping for when i am developing further to avoid caching -->
-        <link rel="stylesheet" href="../../../../style.css?<?=filemtime("../../../../style.css")?>"/>
         <style>
             #container {
                 padding: 4vh;
@@ -16,7 +14,7 @@
             }
             
             th, td {
-                padding: 5px;
+                padding: 8px;
                 text-align: center;
             }
             
@@ -51,25 +49,25 @@
                 <table border=1 style="border-collapse: collapse;">
                     <thead>
                         <th>Navn</th>
-                        <th>Karakter</th>
+                        <th>Poeng</th>
                     </thead>
                     <tbody>
                         <?php
-                            if(filesize("./karakterer.txt") > 0) {
-                                $file = fopen("./karakterer.txt", "r");
-                                $karaktererLowest = 6;
-                                $karaktererHighest = 1;
-                                $karaktererTotal = 0;
-                                $karaktererAmount = 0;
+                            if(filesize("./score.txt") > 0) {
+                                $file = fopen("./score.txt", "r");
+                                $scoreLowest = 100;
+                                $scoreHighest = 0;
+                                $scoreTotal = 0;
+                                $scoreAmount = 0;
 
                                 while(!feof($file)) {
                                     $data = explode(";", fgets($file));
 
                                     if(isset($data[1])) {
-                                        if($data[1] > $karaktererHighest) $karaktererHighest = $data[1];
-                                        if($data[1] < $karaktererLowest) $karaktererLowest = $data[1];
-                                        $karaktererTotal += $data[1];
-                                        $karaktererAmount++;
+                                        if($data[1] > $scoreHighest) $scoreHighest = $data[1];
+                                        if($data[1] < $scoreLowest) $scoreLowest = $data[1];
+                                        $scoreTotal += $data[1];
+                                        $scoreAmount++;
                                         
                                         echo "<tr>";
                                         echo "<td>" . trim($data[0]) . "</td>";
@@ -80,17 +78,17 @@
                                 
                                 echo "<tr>";
                                 echo "<td>Gjennomsnitt</td>";
-                                echo "<td>" . $karaktererTotal/$karaktererAmount . "</td>";
+                                echo "<td>" . round($scoreTotal/$scoreAmount, 2) . "</td>";
                                 echo "</tr>";
 
                                 echo "<tr>";
-                                echo "<td>Høyeste karakter</td>";
-                                echo "<td>" . $karaktererHighest . "</td>";
+                                echo "<td>Høyeste</td>";
+                                echo "<td>" . $scoreHighest . "</td>";
                                 echo "</tr>";
 
                                 echo "<tr>";
-                                echo "<td>Laveste karakter</td>";
-                                echo "<td>" . $karaktererLowest . "</td>";
+                                echo "<td>Laveste</td>";
+                                echo "<td>" . $scoreLowest . "</td>";
                                 echo "</tr>";
                             } else {
                                 echo "<tr>";

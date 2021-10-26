@@ -1,5 +1,0 @@
-Thomas;6
-Karlsen;1
-Juan;4
-Marius J.;4
-Stein;5
