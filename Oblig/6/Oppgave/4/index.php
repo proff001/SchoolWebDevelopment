@@ -75,21 +75,6 @@
                                         echo "</tr>";
                                     }
                                 }
-                                
-                                echo "<tr>";
-                                echo "<td>Gjennomsnitt</td>";
-                                echo "<td>" . round($scoreTotal/$scoreAmount, 2) . "</td>";
-                                echo "</tr>";
-
-                                echo "<tr>";
-                                echo "<td>Høyeste</td>";
-                                echo "<td>" . $scoreHighest . "</td>";
-                                echo "</tr>";
-
-                                echo "<tr>";
-                                echo "<td>Laveste</td>";
-                                echo "<td>" . $scoreLowest . "</td>";
-                                echo "</tr>";
                             } else {
                                 echo "<tr>";
                                 echo "<td>Ingen resultater lagret.</td>";
@@ -98,6 +83,24 @@
                             };
                         ?>
                     </tbody>
+                    <tfoot>
+                        <?php
+                            echo "<tr>";
+                            echo "<td>Gjennomsnitt</td>";
+                            echo "<td>" . round($scoreTotal/$scoreAmount, 2) . "</td>";
+                            echo "</tr>";
+
+                            echo "<tr>";
+                            echo "<td>Høyeste</td>";
+                            echo "<td>" . $scoreHighest . "</td>";
+                            echo "</tr>";
+
+                            echo "<tr>";
+                            echo "<td>Laveste</td>";
+                            echo "<td>" . $scoreLowest . "</td>";
+                            echo "</tr>";
+                        ?>
+                    </tfoot>
                 </table>
 
 
