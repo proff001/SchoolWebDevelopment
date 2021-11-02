@@ -91,6 +91,13 @@
                             <li><a href="./6/Oppgave/4">Oppgave 4</a></li>
                         </ol>
                         
+                        <a href="./7">Oblig 7</a>
+                        <ol>
+                            <li>The basics</li>
+                            <li>Terminologi innen OOP</li>
+                            <li>Programmering</li>
+                        </ol>
+                        
                         <a href="./Template">Template</a>
                     </li>
                 </ul>

@@ -26,14 +26,16 @@
     }
 
     class Elev extends Person {
+        private $number;
         private $group;
         private $teacher;
 
-        function __construct($name, $age, $mobile, $email, $group, $teacher) {
+        function __construct($name, $age, $mobile, $email, $number, $group, $teacher) {
             $this->name = $name;
             $this->age = $age;
             $this->mobile = $mobile;
             $this->email = $email;
+            $this->number = $number;
             $this->group = $group;
             $this->teacher = $teacher;
         }
