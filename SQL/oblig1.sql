@@ -2,10 +2,10 @@ CREATE DATABASE IF NOT EXISTS `skole`;
 USE `skole`;
 
 CREATE TABLE IF NOT EXISTS `elektro` (
-    `id` int NOT NULL AUTO_INCREMENT,
-    `name` varchar(50) NOT NULL,
-    `nStudents` int DEFAULT 0,
-    `teacher` varchar(50),
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(50) NOT NULL,
+    `nStudents` INT DEFAULT 0,
+    `teacher` VARCHAR(50),
     PRIMARY KEY (`id`)
 );
 
