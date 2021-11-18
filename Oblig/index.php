@@ -33,6 +33,7 @@
         <div id="content">
             <div id="container">
                 <ul>
+                    <li><b>PHP Obliger</b></li>
                     <li>
                         <a href="./1">Oblig 1</a>
                         <ol>
@@ -98,8 +99,19 @@
                             <li>Programmering</li>
                         </ol>
                         
-                        <a href="./Template">Template</a>
                     </li>
+
+                    <br>
+
+                    <li><b>SQL Obliger</b></li>
+                    <li>
+                        <a href="../SQL/3">Oblig 3</a>
+                        <ol>
+                            <li>Oppgave 8/9</li>
+                        </ol>
+                    </li>
+                    <br>
+                    <li><a href="./Template">Template</a></li>
                 </ul>
             </div>
         </div>
