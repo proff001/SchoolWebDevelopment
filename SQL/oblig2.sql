@@ -55,4 +55,4 @@ SELECT `tittel` FROM `books`;
 
 SELECT `tittel` FROM `books` ORDER BY `tittel`;
 
-SELECT `tittel`, `ISBN` FROM `books` ORDER BY `tittel` DESC;
+SELECT `books`.ISBN, CONCAT(`authors`.`fornavn`, ' ', `authors`.`etternavn`) AS 'Name' FROM `books` INNER JOIN `authors` ON `books`.`forfatterID` = `authors`.`id` ORDER BY `Name` DESC;
