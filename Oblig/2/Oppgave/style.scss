@@ -1,80 +1,80 @@
 #container {
-    padding: 4vh;
-    flex-direction: column;
-    gap: 1.2vh;
+	padding: 4vh;
+	flex-direction: column;
+	gap: 1.2vh;
 
-    #title {
-        font-weight: bold;
-        font-size: 2vh;
-    }
+	#title {
+		font-weight: bold;
+		font-size: 2vh;
+	}
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.8;
-    gap: 1vh;
-    
-    input {
-        padding: 0.2vh;
-        width: 98%;
-        margin: auto;
-        background: transparent;
-        border-radius: 0.4vh;
-        border-width: 0.1vh;
-        border-style: solid;
-        border-color: rgba(255, 255, 255, 0.4);
-    }
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.8;
+	gap: 1vh;
 
-    input:focus {
-        border-color: rgba(103, 62, 207, 0.8);
-    }
-    
-    textarea {
-        padding: 0.2vh;
-        width: 98%;
-        margin: auto;
-        background: transparent;
-        border-radius: 0.4vh;
-        border-width: 0.1vh;
-        border-style: solid;
-        border-color: rgba(255, 255, 255, 0.4);
-        resize: none;
-    }
+	input {
+		padding: 0.2vh;
+		width: 98%;
+		margin: auto;
+		background: transparent;
+		border-radius: 0.4vh;
+		border-width: 0.1vh;
+		border-style: solid;
+		border-color: rgba(255, 255, 255, 0.4);
+	}
 
-    textarea:focus {
-        border-color: rgba(103, 62, 207, 0.8);
-    }
+	input:focus {
+		border-color: rgba(103, 62, 207, 0.8);
+	}
 
-    input[type="submit"] {
-        font-size: 1.8vh;
-        height: 3vh;
-    }
+	textarea {
+		padding: 0.2vh;
+		width: 98%;
+		margin: auto;
+		background: transparent;
+		border-radius: 0.4vh;
+		border-width: 0.1vh;
+		border-style: solid;
+		border-color: rgba(255, 255, 255, 0.4);
+		resize: none;
+	}
 
-    input[type="submit"]:hover {
-        background-color: rgba(103, 62, 207, 0.7);
-    }
+	textarea:focus {
+		border-color: rgba(103, 62, 207, 0.8);
+	}
 
-    input[type="range"] {
-        width: 23vh;
-        border: 0;
-    }
+	input[type="submit"] {
+		font-size: 1.8vh;
+		height: 3vh;
+	}
+
+	input[type="submit"]:hover {
+		background-color: rgba(103, 62, 207, 0.7);
+	}
+
+	input[type="range"] {
+		width: 23vh;
+		border: 0;
+	}
 }
 
 .gender {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .button:hover {
-    background-color: rgba(103, 62, 207, 0.7);
+	background-color: rgba(103, 62, 207, 0.7);
 }
 
 .active {
-    border-color: rgba(103, 62, 207, 0.7)
+	border-color: rgba(103, 62, 207, 0.7)
 }
 
 .wrong-border {

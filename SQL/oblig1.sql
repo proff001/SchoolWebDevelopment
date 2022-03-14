@@ -2,22 +2,22 @@ CREATE DATABASE IF NOT EXISTS `skole`;
 USE `skole`;
 
 CREATE TABLE IF NOT EXISTS `elektro` (
-    `id` INT NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(50) NOT NULL,
-    `nStudents` INT DEFAULT 0,
-    `teacher` VARCHAR(50),
-    PRIMARY KEY (`id`)
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL,
+	`nStudents` INT DEFAULT 0,
+	`teacher` VARCHAR(50),
+	PRIMARY KEY (`id`)
 );
 
 INSERT INTO `elektro` (`name`, `nStudents`, `teacher`) VALUES
-    ('1ELEA', 15, 'Thomas'),
-    ('1ELEB', 13, 'Atle'),
-    ('1ELEC', 15, 'Peter'),
-    ('1ELED', 11, 'Øystein'),
-    ('2ELEA', 15, 'Rino'),
-    ('2ELEB', 15, 'Rino'),
-    ('2DEA', 15, 'Joey'),
-    ('3DAA', 13, 'Jon');
+	('1ELEA', 15, 'Thomas'),
+	('1ELEB', 13, 'Atle'),
+	('1ELEC', 15, 'Peter'),
+	('1ELED', 11, 'Øystein'),
+	('2ELEA', 15, 'Rino'),
+	('2ELEB', 15, 'Rino'),
+	('2DEA', 15, 'Joey'),
+	('3DAA', 13, 'Jon');
 
 SELECT * FROM `elektro`;
 SELECT `name`, `nStudents` FROM `elektro`;
