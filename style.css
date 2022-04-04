@@ -3,14 +3,13 @@
   padding: 0;
   outline: 0;
   font-family: Roboto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   overflow-x: hidden;
-  color: gainsboro;
+  color: rgb(220, 220, 220);
 }
 
 body {
-  background-color: #b4b4b4;
+  background-color: rgb(180, 180, 180);
 }
 
 #header {
@@ -21,16 +20,14 @@ body {
       -ms-user-select: none;
           user-select: none;
   overflow: hidden;
-  background-color: #0c0c0c;
+  background-color: rgb(12, 12, 12);
   height: 5vh;
 }
-
 #header .menuItem {
   float: right;
   height: 100%;
   width: 12vh;
 }
-
 #header .menuItem a {
   color: rgba(255, 255, 255, 0.8);
   width: 100%;
@@ -38,23 +35,18 @@ body {
   font-size: 1.8vh;
   text-decoration: none;
 }
-
 #header .menuItem.active {
   background-color: #04AA6D;
 }
-
 #header .menuItem.active a {
   color: white;
 }
-
 #header .menuItem:hover {
-  background-color: gainsboro;
+  background-color: rgb(220, 220, 220);
 }
-
 #header .menuItem:hover a {
-  color: #1a1a1a;
+  color: rgb(26, 26, 26);
 }
-
 #header #title {
   height: 100%;
   float: left;
@@ -64,15 +56,9 @@ body {
 }
 
 .flexAlignCenter {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #content {
@@ -80,15 +66,9 @@ body {
   padding-top: 10vh;
   padding-bottom: 5vh;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #container {
@@ -102,24 +82,17 @@ body {
 }
 
 #footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 5vh;
   font-size: 1.8vh;
-  background-color: #0c0c0c;
+  background-color: rgb(12, 12, 12);
   color: rgba(255, 255, 255, 0.8);
 }
 
 .qAndA {
   list-style-type: lower-latin;
   padding: 0.5vh 0vh 1vh 2vh;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

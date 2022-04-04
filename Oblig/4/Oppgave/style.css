@@ -1,38 +1,22 @@
 #container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 4vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 1.2vh;
 }
-
 #container #title {
   font-weight: bold;
   font-size: 2vh;
 }
 
 form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-size: 1.8vh;
   gap: 1vh;
 }
-
 form input {
   padding: 0.2vh;
   width: 98%;
@@ -43,11 +27,9 @@ form input {
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.4);
 }
-
 form input:focus {
   border-color: rgba(103, 62, 207, 0.8);
 }
-
 form select {
   padding: 0.2vh;
   width: 98%;
@@ -59,7 +41,6 @@ form select {
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.4);
 }
-
 form textarea {
   padding: 0.2vh;
   width: 98%;
@@ -71,46 +52,31 @@ form textarea {
   border-color: rgba(255, 255, 255, 0.4);
   resize: none;
 }
-
 form textarea:focus {
   border-color: rgba(103, 62, 207, 0.8);
 }
-
-form input[type="submit"] {
+form input[type=submit] {
   font-size: 1.8vh;
   height: 3vh;
 }
-
-form input[type="submit"]:hover {
+form input[type=submit]:hover {
   background-color: rgba(103, 62, 207, 0.7);
 }
-
-form input[type="range"] {
+form input[type=range] {
   width: 23vh;
   border: 0;
 }
 
 .radial {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   gap: 0.5vh;
 }
 
 .radials {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 2vh;
 }
 
@@ -128,5 +94,4 @@ form input[type="range"] {
 
 .correct-border {
   border-color: #6AA84F;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
