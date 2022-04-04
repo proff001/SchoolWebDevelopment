@@ -17,12 +17,12 @@
 			<div class="navItem flexAlignCenter active">Hjem</div>
 		</header>
 
-		<div id="content">
+		<div id="content" class="flexAlignCenter">
 			<button id="test">
 				Test
 			</button>
 		</div>
 
-		<footer>&#169;2022 Thomas Meller Hole</footer>
+		<footer class="flexAlignCenter">&#169;2022 Thomas Meller Hole</footer>
 	</body>
 </html>

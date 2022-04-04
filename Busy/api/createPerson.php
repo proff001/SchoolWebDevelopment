@@ -13,7 +13,7 @@
 
 	if(!property_exists($POST, "firma")) {
 		$res = Query("SELECT * FROM `firma` WHERE `id` = " . $POST->firma);
-
+		
 
 		$querry = "INSERT INTO `personer` (`fornavn`, `etternavn`, `tittel`, `epost`, `telefon`, `firma`) VALUES ('" . $POST->fornavn . "', '" . $POST->etternavn . "', '" . $POST->tittel . "', '" . $POST->epost . "', '" . $POST->telefon . "'," . $POST->firma . ")";
 	}
