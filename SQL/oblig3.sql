@@ -74,7 +74,7 @@ SELECT `region`, SUM(`population`) FROM `cia` GROUP BY `region`;
 
 SELECT `region` FROM `cia` WHERE `region` LIKE '%e%' GROUP BY `region`;
 
-SELECT `name`, SUM(`population`) FROM `cia` WHERE `name` LIKE 'N%';
+SELECT `name`, SUM(`population`) FROM `cia` WHERE `name` LIKE 'N%' GROUP BY `name`;
 
 SELECT SUM(`area`) FROM `cia` WHERE `population` > 10000000;
 
