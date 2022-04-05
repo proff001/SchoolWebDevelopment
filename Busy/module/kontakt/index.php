@@ -9,9 +9,7 @@
 		<!-- Keeping for when i am developing further to avoid caching -->
 		<link rel="stylesheet" href="/Busy/style.css?<?=filemtime("/Busy/style.css")?>"/>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bluzky/nice-select2@2.0.0/dist/css/nice-select2.css">
-		<!-- <link rel="stylesheet" href="/Busy/lib/nice-select2/nice-select2.css"> -->
 		<script src="https://cdn.jsdelivr.net/gh/bluzky/nice-select2@2.0.0/dist/js/nice-select2.js"></script>
-		<!-- <script src="/Busy/lib/nice-select2/nice-select2.js"></script> -->
 		<script src="./script.js" defer></script>
 	</head>
 	<body>
@@ -121,17 +119,17 @@
 					</select>
 
 					Navn
-					<input type="text" name="fornavn" id="firmaEditNavn">
+					<input type="text" name="navn" id="firmaEditNavn">
 					Adresse
-					<input type="text" name="etternavn" id="firmaEditAdresse">
+					<input type="text" name="adresse" id="firmaEditAdresse">
 					Leveringsadresse
-					<input type="text" name="tittel" id="firmaEditLeveringsadresse">
+					<input type="text" name="leveringsadresse" id="firmaEditLeveringsadresse">
 					Postnr
-					<input type="text" name="epost" minlength="4" minlength="5" id="firmaEditPostnr">
+					<input type="text" name="postnr" minlength="4" minlength="5" id="firmaEditPostnr">
 					Poststed
-					<input type="text" name="telefon" id="firmaEditPoststed">
+					<input type="text" name="poststed" id="firmaEditPoststed">
 					Leverandør
-					<input type="checkbox" name="leverandor">
+					<input type="checkbox" name="leverandor" id="firmaEditLeverandor">
 
 					<button type="submit">Rediger firma</button>
 				</form>

@@ -7,7 +7,7 @@
 	$POST = json_decode($json);
 
 	if(!$json) return print("Missing data");
-	if(!property_exists($POST, "id")) return print("Missing action");
+	if(!property_exists($POST, "id")) return print("Missing id");
 
 	$query = "UPDATE `firma` SET";
 

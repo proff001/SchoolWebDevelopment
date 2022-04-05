@@ -24,6 +24,7 @@ const elements = {
 	},
 
 	firmaSelector3: document.getElementById('firmaSelector3'),
+	editFirma: document.getElementById('editFirma'),
 	firmaEditInfo: {
 		navn: document.getElementById('firmaEditNavn'),
 		adresse: document.getElementById('firmaEditAdresse'),
@@ -201,5 +202,51 @@ elements.personDelete.addEventListener('click', (e) => {
 });
 
 elements.firmaSelector3.addEventListener('change', (e) => {
+	const id = elements.firmaSelector3.value;
+	if(id == 0 || !firmaData[id]) {
+		elements.firmaEditInfo.navn.value = '';
+		elements.firmaEditInfo.adresse.value = '';
+		elements.firmaEditInfo.leveringsadresse.value = '';
+		elements.firmaEditInfo.postnr.value = '';
+		elements.firmaEditInfo.poststed.value = '';
+		elements.firmaEditInfo.leverandor.checked = false;
 
+		return;
+	}
+	const data = firmaData[id];
+	console.log(data);
+
+	elements.firmaEditInfo.navn.value = data.navn;
+	elements.firmaEditInfo.adresse.value = data.adresse;
+	elements.firmaEditInfo.leveringsadresse.value = data.leveringsadresse;
+	elements.firmaEditInfo.postnr.value = data.postnr;
+	elements.firmaEditInfo.poststed.value = data.poststed;
+	elements.firmaEditInfo.leverandor.checked = data.leverandor;
+});
+
+elements.editFirma.addEventListener('submit', (e) => {
+	e.preventDefault();
+
+	const orgData = firmaData[elements.firmaSelector3.value];
+	if(!orgData.leveringsadresse) orgData.leveringsadresse = '';
+
+	const data = {
+		id: elements.firmaSelector3.value,
+	}
+
+	if(e.target.navn.value != orgData.navn) data['navn'] = e.target.navn.value;
+	if(e.target.adresse.value != orgData.adresse) data['adresse'] = e.target.adresse.value;
+	if(e.target.leveringsadresse.value != orgData.leveringsadresse) data['leveringsadresse'] = e.target.leveringsadresse.value;
+	if(e.target.postnr.value != orgData.postnr) data['postnr'] = e.target.postnr.value;
+	if(e.target.poststed.value != orgData.poststed) data['poststed'] = e.target.poststed.value;
+	if(e.target.leverandor.checked != orgData.leverandor) data['leverandor'] = e.target.leverandor.checked;
+
+	console.log(data);
+
+	axios.post('/Busy/api/editFirma.php', data)
+	.then(res => {
+		console.log(res);
+		setupFirmaSelector();
+		resetFirma();
+	}).catch(err => console.log(err));
 });
