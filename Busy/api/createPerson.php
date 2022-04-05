@@ -8,16 +8,13 @@
 
 	if(!$json) return print("Missing data");
 	if(!property_exists($POST, "fornavn") || !property_exists($POST, "etternavn") || !property_exists($POST, "tittel") || !property_exists($POST, "epost") || !property_exists($POST, "telefon")) return print("Missing parameters");
-	
-	$querry = "INSERT INTO `personer` (`fornavn`, `etternavn`, `tittel`, `epost`, `telefon`) VALUES ('" . $POST->fornavn . "', '" . $POST->etternavn . "', '" . $POST->tittel . "', '" . $POST->epost . "', '" . $POST->telefon . "')";
 
-	if(!property_exists($POST, "firma")) {
-		$res = Query("SELECT * FROM `firma` WHERE `id` = " . $POST->firma);
-		
+	$querry = "INSERT INTO `personer` (`fornavn`, `etternavn`, `tittel`, `epost`, `telefon`) VALUES ('$POST->fornavn', '$POST->etternavn', '$POST->tittel', '$POST->epost', '$POST->telefon')";
 
-		$querry = "INSERT INTO `personer` (`fornavn`, `etternavn`, `tittel`, `epost`, `telefon`, `firma`) VALUES ('" . $POST->fornavn . "', '" . $POST->etternavn . "', '" . $POST->tittel . "', '" . $POST->epost . "', '" . $POST->telefon . "'," . $POST->firma . ")";
+	if(property_exists($POST, "firma") && $POST->firma > 0) {
+		$querry = "INSERT INTO `personer` (`fornavn`, `etternavn`, `tittel`, `epost`, `telefon`, `firma`) VALUES ('$POST->fornavn', '$POST->etternavn', '$POST->tittel', '$POST->epost', '$POST->telefon', $POST->firma)";
 	}
 
-	$data = Query($querry)
+	$data = Query($querry);
 	echo $data;
 ?>

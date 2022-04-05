@@ -28,7 +28,9 @@ header {
           user-select: none;
   overflow: hidden;
   background-color: var(--darkgray);
+  border-bottom: 1px var(--light) solid;
   height: 50px;
+  z-index: 1;
 }
 header #title {
   height: 100%;
@@ -81,35 +83,41 @@ footer {
 
 #content {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 60px;
+  margin-bottom: 10px;
   min-height: calc(100vh - 100px);
 }
 
 #forms {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-form {
+.form {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
+  min-width: 280px;
+  max-width: 280px;
   background-color: var(--darkgray);
   padding: 10px;
   border-radius: 5px;
 }
-form #title {
+.form #title {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 20px;
 }
-form input {
+.form input {
   margin-top: 5px;
   margin-bottom: 10px;
 }
-form input[type=text] {
+.form input[type=text] {
   width: 260px;
   height: 38px;
   font-size: 16px;
@@ -118,7 +126,7 @@ form input[type=text] {
   color: var(--darkgray);
   text-align: center;
 }
-form button {
+.form button {
   width: 260px;
   height: 38px;
   font-size: 16px;
@@ -127,12 +135,18 @@ form button {
   background-color: #fff;
   color: var(--darkgray);
 }
-form button:hover {
+.form button:hover {
   background-color: #04AA6D;
+}
+.form span {
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .nice-select {
   min-width: 260px;
+  max-width: 260px;
+  margin-top: 6px;
   margin-bottom: 10px;
 }
 .nice-select .option {

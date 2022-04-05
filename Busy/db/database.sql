@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `personer` (
 	`telefon` VARCHAR(11) NOT NULL,
 	`firma` INT(11),
 	PRIMARY KEY (`id`),
-	FOREIGN KEY (`firma`) REFERENCES `firmaer`(`id`)
+	FOREIGN KEY (`firma`) REFERENCES `firmaer`(`id`) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS `produkter` (
