@@ -26,14 +26,22 @@
 
 					Navn
 					<input type="text" name="navn" required>
+
 					Adresse
 					<input type="text" name="adresse" required>
+
+					Organisasjonsnummer
+					<input type="text" name="orgnummer" required>
+
 					Leveringsadresse
 					<input type="text" name="leveringsadresse">
+
 					Postnr
 					<input type="text" name="postnr" minlength="4" minlength="5" required>
+
 					Poststed
 					<input type="text" name="poststed" required>
+
 					Leverandør
 					<input type="checkbox" name="leverandor">
 
@@ -45,14 +53,19 @@
 
 					Fornavn
 					<input type="text" name="fornavn" required>
+
 					Etternavn
 					<input type="text" name="etternavn" required>
+
 					Tittel
 					<input type="text" name="tittel" required>
+
 					Epost
 					<input type="text" name="epost" required>
+
 					Telefon
 					<input type="text" name="telefon" minlength="8" maxlength="8" required>
+
 					Firma
 					<select name="firma" id="firmaSelector" style="display: none;">
 						<option selected value="0">Velg et firma</option>
@@ -68,6 +81,9 @@
 					<select id="firmaSelector2" style="display: none;">
 						<option selected value="0">Velg et firma</option>
 					</select>
+
+					Organisasjonsnummer
+					<span id="firmaOrgnummer">Ingen firma valg</span>
 
 					Adresse:
 					<span id="firmaAdresse">Ingen firma valg</span>
@@ -114,24 +130,61 @@
 					<div id="title">Rediger et firma</div>
 
 					Firma
-					<select name="firma" id="firmaSelector3" style="display: none;">
+					<select id="firmaSelector3" style="display: none;">
 						<option selected value="0">Velg et firma</option>
 					</select>
 
 					Navn
 					<input type="text" name="navn" id="firmaEditNavn">
+
+					Organisasjonsnummer
+					<input type="text" name="orgnummer" id="firmaEditOrgnummer">
+
 					Adresse
 					<input type="text" name="adresse" id="firmaEditAdresse">
+
 					Leveringsadresse
 					<input type="text" name="leveringsadresse" id="firmaEditLeveringsadresse">
+
 					Postnr
 					<input type="text" name="postnr" minlength="4" minlength="5" id="firmaEditPostnr">
+
 					Poststed
 					<input type="text" name="poststed" id="firmaEditPoststed">
+
 					Leverandør
 					<input type="checkbox" name="leverandor" id="firmaEditLeverandor">
 
 					<button type="submit">Rediger firma</button>
+				</form>
+
+				<form class="form" id="editPerson">
+					<div id="title">Rediger en person</div>
+
+					Person
+					<select id="personSelector2" style="display: none;">
+						<option selected value="0">Velg en person</option>
+					</select>
+
+					Fornavn
+					<input type="text" name="fornavn" id="personEditFornavn">
+
+					Etternavn
+					<input type="text" name="etternavn" id="personEditEtternavn">
+
+					Tittel
+					<input type="text" name="tittel" id="personEditTittel">
+
+					Epost
+					<input type="text" name="epost" id="personEditEpost">
+					
+					Telefon
+					<input type="text" name="telefon" minlength="8" maxlength="8" id="personEditTelefon">
+					
+					Firma
+					<input type="text" name="firma" id="personEditFirma">
+
+					<button type="submit">Rediger person</button>
 				</form>
 			</div>
 		</div>

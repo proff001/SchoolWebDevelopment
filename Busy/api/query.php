@@ -1,11 +1,15 @@
 <?php
-	function addParam($query, $param) {
-		if(str_contains($query, "WHERE")) $query .= ", " . $param;
-		else $query .= " WHERE " . $param;
+	function addWhereParam($query, $param, $value, $isString = true) {
+		$qry = $isString ? "`$param` = '$value'" : "`$param` = $value";
+
+		if(!str_contains($query, "WHERE")) $query .= "WHERE $qry";
+		else $query .= " AND $qry";
+
+		return $query;
 	}
 
-	function addSetParam($query, $param, $value, $string = true) {
-		$qry = $string ? " `$param` = '$value'" : " `$param` = $value";
+	function addSetParam($query, $param, $value, $isString = true) {
+		$qry = $isString ? " `$param` = '$value'" : " `$param` = $value";
 
 		if(!str_contains($query, "=")) $query .= "$qry";
 		else $query .= ",$qry";

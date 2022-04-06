@@ -12,6 +12,7 @@
 	$query = "UPDATE `firmaer` SET";
 
 	if(property_exists($POST, "navn")) $query = addSetParam($query, "navn", $POST->navn);
+	if(property_exists($POST, "orgnummer")) $query = addSetParam($query, "orgnummer", $POST->orgnummer);
 	if(property_exists($POST, "adresse")) $query = addSetParam($query, "adresse", $POST->adresse);
 	if(property_exists($POST, "leveringsadresse")) $query = addSetParam($query, "leveringsadresse", strlen($POST->leveringsadresse) > 0 ? $POST->leveringsadresse : 'NULL', strlen($POST->leveringsadresse) > 0 ? true : false);
 	if(property_exists($POST, "postnr")) $query = addSetParam($query, "postnr", $POST->postnr);

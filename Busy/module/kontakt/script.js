@@ -7,6 +7,7 @@ const elements = {
 	firmaSelector2: document.getElementById('firmaSelector2'),
 	firmaDelete: document.getElementById('firmaDelete'),
 	firmainformasjon: {
+		orgnummer: document.getElementById('firmaOrgnummer'),
 		adresse: document.getElementById('firmaAdresse'),
 		leveringsadresse: document.getElementById('firmaLeveringsadresse'),
 		postnr: document.getElementById('firmaPostnr'),
@@ -27,11 +28,23 @@ const elements = {
 	editFirma: document.getElementById('editFirma'),
 	firmaEditInfo: {
 		navn: document.getElementById('firmaEditNavn'),
+		orgnummer: document.getElementById('firmaEditOrgnummer'),
 		adresse: document.getElementById('firmaEditAdresse'),
 		leveringsadresse: document.getElementById('firmaEditLeveringsadresse'),
 		postnr: document.getElementById('firmaEditPostnr'),
 		poststed: document.getElementById('firmaEditPoststed'),
 		leverandor: document.getElementById('firmaEditLeverandor'),
+	},
+
+	personSelector2: document.getElementById('personSelector2'),
+	editPerson: document.getElementById('editPerson'),
+	personEditInfo: {
+		fornavn: document.getElementById('personEditFornavn'),
+		etternavn: document.getElementById('personEditEtternavn'),
+		tittel: document.getElementById('personEditTittel'),
+		epost: document.getElementById('personEditEpost'),
+		telefon: document.getElementById('personEditTelefon'),
+		firma: document.getElementById('personEditFirma'),
 	}
 }
 
@@ -44,6 +57,7 @@ const firmaSelector = NiceSelect.bind(elements.firmaSelector, options);
 const firmaSelector2 = NiceSelect.bind(elements.firmaSelector2, options);
 const firmaSelector3 = NiceSelect.bind(elements.firmaSelector3, options);
 const personSelector = NiceSelect.bind(elements.personSelector, options)
+const personSelector2 = NiceSelect.bind(elements.personSelector2, options)
 
 let firmaData = {};
 let personData = {};
@@ -59,6 +73,7 @@ async function setupFirmaSelector() {
 	if(elements.firmaSelector.childElementCount > 1) elements.firmaSelector.innerHTML = defaultFirmaData;
 	if(elements.firmaSelector2.childElementCount > 1) elements.firmaSelector2.innerHTML = defaultFirmaData;
 	if(elements.firmaSelector3.childElementCount > 1) elements.firmaSelector3.innerHTML = defaultFirmaData;
+	resetFirma();
 
 	firmaData = {};
 
@@ -85,7 +100,9 @@ async function setupPersonSelector() {
 	personSelector.clear();
 
 	if(elements.personSelector.childElementCount > 1) elements.personSelector.innerHTML = defaultPersonData;
-	
+	if(elements.personSelector2.childElementCount > 1) elements.personSelector2.innerHTML = defaultPersonData;
+	resetPerson();
+
 	personData = {};
 
 	res.data.forEach((_personData) => {
@@ -93,11 +110,13 @@ async function setupPersonSelector() {
 		option.value = _personData.id;
 		option.innerHTML = `${_personData.fornavn} ${_personData.etternavn}`;
 		elements.personSelector.appendChild(option);
+		elements.personSelector2.appendChild(option.cloneNode(true));
 
 		personData[_personData.id] = _personData;
 	});
 
 	personSelector.update();
+	personSelector2.update();
 }
 
 setupFirmaSelector();
@@ -108,6 +127,7 @@ elements.lagFirma.addEventListener('submit', (e) => {
 
 	const data = {
 		navn: e.target.navn.value,
+		orgnummer: e.target.orgnummer.value,
 		adresse: e.target.adresse.value,
 		postnr: e.target.postnr.value,
 		poststed: e.target.poststed.value,
@@ -152,6 +172,7 @@ elements.firmaSelector2.addEventListener('change', (e) => {
 	const data = firmaData[e.target.value];
 
 	elements.firmainformasjon.adresse.innerHTML = data.adresse;
+	elements.firmainformasjon.orgnummer.innerHTML = data.orgnummer;
 	elements.firmainformasjon.postnr.innerHTML = data.postnr;
 	elements.firmainformasjon.poststed.innerHTML = data.poststed;
 	elements.firmainformasjon.leverandor.innerHTML = data.leverandor != 0 ? 'Ja' : 'Nei';
@@ -168,7 +189,6 @@ elements.firmaDelete.addEventListener('click', (e) => {
 		setupFirmaSelector();
 		resetFirma();
 	}).catch(err => console.log(err));
-	console.log('delete');
 });
 
 elements.personSelector.addEventListener('change', (e) => {
@@ -194,17 +214,16 @@ elements.personDelete.addEventListener('click', (e) => {
 		setupPersonSelector();
 		resetPerson();
 	}).catch(err => console.log(err));
-	console.log('delete');
 });
 
 elements.firmaSelector3.addEventListener('change', (e) => {
 	const id = elements.firmaSelector3.value;
-	if(id == 0 || !firmaData[id]) return elements.editFirma.reset();;
+	if(id == 0 || !firmaData[id]) return elements.editFirma.reset();
 
 	const data = firmaData[id];
-	console.log(data);
 
 	elements.firmaEditInfo.navn.value = data.navn;
+	elements.firmaEditInfo.orgnummer.value = data.orgnummer;
 	elements.firmaEditInfo.adresse.value = data.adresse;
 	elements.firmaEditInfo.leveringsadresse.value = data.leveringsadresse;
 	elements.firmaEditInfo.postnr.value = data.postnr;
@@ -215,6 +234,8 @@ elements.firmaSelector3.addEventListener('change', (e) => {
 elements.editFirma.addEventListener('submit', (e) => {
 	e.preventDefault();
 
+	if(elements.firmaSelector3.value == 0 || !firmaData[elements.firmaSelector3.value]) return;
+
 	const orgData = firmaData[elements.firmaSelector3.value];
 	if(!orgData.leveringsadresse) orgData.leveringsadresse = '';
 
@@ -223,13 +244,14 @@ elements.editFirma.addEventListener('submit', (e) => {
 	}
 
 	if(e.target.navn.value != orgData.navn) data['navn'] = e.target.navn.value;
+	if(e.target.orgnummer.value != orgData.orgnummer) data['orgnummer'] = e.target.orgnummer.value;
 	if(e.target.adresse.value != orgData.adresse) data['adresse'] = e.target.adresse.value;
 	if(e.target.leveringsadresse.value != orgData.leveringsadresse) data['leveringsadresse'] = e.target.leveringsadresse.value;
 	if(e.target.postnr.value != orgData.postnr) data['postnr'] = e.target.postnr.value;
 	if(e.target.poststed.value != orgData.poststed) data['poststed'] = e.target.poststed.value;
 	if(e.target.leverandor.checked != orgData.leverandor) data['leverandor'] = e.target.leverandor.checked ? 1 : 0;
 
-	console.log(data);
+	if(Object.keys(data).length == 1) return;
 
 	axios.post('/Busy/api/editFirma.php', data)
 	.then(res => {
@@ -237,5 +259,53 @@ elements.editFirma.addEventListener('submit', (e) => {
 		setupFirmaSelector();
 		firmaSelector3.clear();
 		elements.editFirma.reset();
+	}).catch(err => console.log(err));
+});
+
+elements.personSelector2.addEventListener('change', (e) => {
+	const id = elements.personSelector2.value;
+	if(id == 0 || !personData[id]) return elements.editPerson.reset();
+
+	const data = personData[id];
+
+	elements.personEditInfo.fornavn.value = data.fornavn;
+	elements.personEditInfo.etternavn.value = data.etternavn;
+	elements.personEditInfo.tittel.value = data.tittel;
+	elements.personEditInfo.epost.value = data.epost;
+	elements.personEditInfo.telefon.value = data.telefon;
+	if(data.firma && firmaData[data.firma].navn) elements.personEditInfo.firma.value = firmaData[data.firma].navn;
+});
+
+elements.editPerson.addEventListener('submit', (e) => {
+	e.preventDefault();
+
+	if(elements.personSelector2.value == 0 || !personData[elements.personSelector2.value]) return;
+
+	const orgData = personData[elements.personSelector2.value];
+	if(!orgData.firma) orgData.firma = 0;
+
+	const data = {
+		id: elements.personSelector2.value,
+	}
+
+	if(e.target.fornavn.value != orgData.fornavn) data['fornavn'] = e.target.fornavn.value;
+	if(e.target.etternavn.value != orgData.etternavn) data['etternavn'] = e.target.etternavn.value;
+	if(e.target.tittel.value != orgData.tittel) data['tittel'] = e.target.tittel.value;
+	if(e.target.epost.value != orgData.epost) data['epost'] = e.target.epost.value;
+	if(e.target.telefon.value != orgData.telefon) data['telefon'] = e.target.telefon.value;
+	if(e.target.firma.value != orgData.firma) {
+		const firma = Object.values(firmaData).find(f => f.navn == e.target.firma.value);
+		if(firma && firma.id != orgData.firma) data['firma'] = firma.id;
+		if(e.target.firma.value.length == 0) data['firma'] = 0;
+	}
+
+	if(Object.keys(data).length == 1) return;
+
+	axios.post('/Busy/api/editPerson.php', data)
+	.then(res => {
+		console.log(res);
+		setupPersonSelector();
+		personSelector2.clear();
+		elements.editPerson.reset();
 	}).catch(err => console.log(err));
 });

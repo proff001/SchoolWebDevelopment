@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -322,
-    "scrollLeft": -123,
-    "zoomLevel": 0.8,
+    "scrollTop": 0,
+    "scrollLeft": 0,
+    "zoomLevel": 1,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -193,7 +193,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -212,7 +212,7 @@
           "active": false,
           "left": 115.5559,
           "top": 145.2228,
-          "zIndex": 1,
+          "zIndex": 8,
           "widthName": 60,
           "widthComment": 60
         },
@@ -885,7 +885,7 @@
       {
         "identification": false,
         "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
+        "startRelationshipType": "Ring",
         "start": {
           "tableId": "408d44e0-33d3-404d-bb45-85c33bc3b33f",
           "columnIds": [

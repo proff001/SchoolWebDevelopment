@@ -9,12 +9,12 @@
 	if($json) {
 		$POST = json_decode($json);
 
-		if(property_exists($POST, "id")) addParam($query, "`id` = " .  $POST->id);
-		if(property_exists($POST, "navn")) addParam($query, "`navn` = " .  $POST->navn);
-		if(property_exists($POST, "adresse")) addParam($query, "`adresse` = " .  $POST->adresse);
-		if(property_exists($POST, "postnr")) addParam($query, "`postnr` = " .  $POST->postnr);
-		if(property_exists($POST, "poststed")) addParam($query, "`poststed` = " .  $POST->poststed);
-		if(property_exists($POST, "leverandor")) addParam($query, "`leverandor` = " .  $POST->leverandor);
+		if(property_exists($POST, "id")) $query = addWhereParam($query, "id", $POST->id);
+		if(property_exists($POST, "navn")) $query = addWhereParam($query, "navn", $POST->navn);
+		if(property_exists($POST, "adresse")) $query = addWhereParam($query, "adresse", $POST->adresse);
+		if(property_exists($POST, "postnr")) $query = addWhereParam($query, "postnr", $POST->postnr);
+		if(property_exists($POST, "poststed")) $query = addWhereParam($query, "poststed", $POST->poststed);
+		if(property_exists($POST, "leverandor")) $query = addWhereParam($query, "leverandor", $POST->leverandor);
 	};
 
 	$data = Query($query);

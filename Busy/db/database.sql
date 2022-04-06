@@ -4,6 +4,7 @@ USE `busy`;
 CREATE TABLE IF NOT EXISTS `firmaer` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`navn` VARCHAR(255) NOT NULL,
+	`orgnummer` VARCHAR(9) NOT NULL,
 	`adresse` VARCHAR(255) NOT NULL,
 	`leveringsadresse` VARCHAR(255),
 	`postnr` VARCHAR(5) NOT NULL,
