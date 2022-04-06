@@ -9,14 +9,14 @@
 	if(!$json) return print("Missing data");
 	if(!property_exists($POST, "id")) return print("Missing id");
 
-	$query = "UPDATE `firma` SET";
+	$query = "UPDATE `firmaer` SET";
 
-	if(property_exists($POST, "navn")) $query .= " `navn` = '$POST->navn'";
-	if(property_exists($POST, "adresse")) $query .= ", `adresse` = '$POST->adresse'";
-	if(property_exists($POST, "leveringsadresse")) $query .= ", `leveringsadresse` = '$POST->leveringsadresse'";
-	if(property_exists($POST, "postnr")) $query .= ", `postnr` = '$POST->postnr'";
-	if(property_exists($POST, "poststed")) $query .= ", `poststed` = '$POST->poststed'";
-	if(property_exists($POST, "leverandor")) $query .= ", `leverandor` = '$POST->leverandor'";
+	if(property_exists($POST, "navn")) $query = addSetParam($query, "navn", $POST->navn);
+	if(property_exists($POST, "adresse")) $query = addSetParam($query, "adresse", $POST->adresse);
+	if(property_exists($POST, "leveringsadresse")) $query = addSetParam($query, "leveringsadresse", strlen($POST->leveringsadresse) > 0 ? $POST->leveringsadresse : 'NULL', strlen($POST->leveringsadresse) > 0 ? true : false);
+	if(property_exists($POST, "postnr")) $query = addSetParam($query, "postnr", $POST->postnr);
+	if(property_exists($POST, "poststed")) $query = addSetParam($query, "poststed", $POST->poststed);
+	if(property_exists($POST, "leverandor")) $query = addSetParam($query, "leverandor", $POST->leverandor, false);
 
 	$query .= " WHERE `id` = $POST->id";
 

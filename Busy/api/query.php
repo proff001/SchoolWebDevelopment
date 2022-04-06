@@ -4,6 +4,15 @@
 		else $query .= " WHERE " . $param;
 	}
 
+	function addSetParam($query, $param, $value, $string = true) {
+		$qry = $string ? " `$param` = '$value'" : " `$param` = $value";
+
+		if(!str_contains($query, "=")) $query .= "$qry";
+		else $query .= ",$qry";
+
+		return $query;
+	}
+
 	function Query($query) {
 		mysqli_report(MYSQLI_REPORT_STRICT);
 

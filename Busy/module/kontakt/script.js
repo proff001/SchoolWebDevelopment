@@ -154,12 +154,8 @@ elements.firmaSelector2.addEventListener('change', (e) => {
 	elements.firmainformasjon.adresse.innerHTML = data.adresse;
 	elements.firmainformasjon.postnr.innerHTML = data.postnr;
 	elements.firmainformasjon.poststed.innerHTML = data.poststed;
-
-	if(data.leveringsadresse) elements.firmainformasjon.leveringsadresse.innerHTML = data.leveringsadresse;
-	else elements.firmainformasjon.leveringsadresse.innerHTML = 'Ingen leveringsadresse';
-
-	if(data.leverandor != 0) elements.firmainformasjon.leverandor.innerHTML = 'Ja';
-	else elements.firmainformasjon.leverandor.innerHTML = 'Nei';
+	elements.firmainformasjon.leverandor.innerHTML = data.leverandor != 0 ? 'Ja' : 'Nei';
+	elements.firmainformasjon.leveringsadresse.innerHTML = data.leveringsadresse ? data.leveringsadresse : 'Ingen leveringsadresse';
 });
 
 elements.firmaDelete.addEventListener('click', (e) => {
@@ -203,16 +199,8 @@ elements.personDelete.addEventListener('click', (e) => {
 
 elements.firmaSelector3.addEventListener('change', (e) => {
 	const id = elements.firmaSelector3.value;
-	if(id == 0 || !firmaData[id]) {
-		elements.firmaEditInfo.navn.value = '';
-		elements.firmaEditInfo.adresse.value = '';
-		elements.firmaEditInfo.leveringsadresse.value = '';
-		elements.firmaEditInfo.postnr.value = '';
-		elements.firmaEditInfo.poststed.value = '';
-		elements.firmaEditInfo.leverandor.checked = false;
+	if(id == 0 || !firmaData[id]) return elements.editFirma.reset();;
 
-		return;
-	}
 	const data = firmaData[id];
 	console.log(data);
 
@@ -221,7 +209,7 @@ elements.firmaSelector3.addEventListener('change', (e) => {
 	elements.firmaEditInfo.leveringsadresse.value = data.leveringsadresse;
 	elements.firmaEditInfo.postnr.value = data.postnr;
 	elements.firmaEditInfo.poststed.value = data.poststed;
-	elements.firmaEditInfo.leverandor.checked = data.leverandor;
+	elements.firmaEditInfo.leverandor.checked = data.leverandor == 1;
 });
 
 elements.editFirma.addEventListener('submit', (e) => {
@@ -239,7 +227,7 @@ elements.editFirma.addEventListener('submit', (e) => {
 	if(e.target.leveringsadresse.value != orgData.leveringsadresse) data['leveringsadresse'] = e.target.leveringsadresse.value;
 	if(e.target.postnr.value != orgData.postnr) data['postnr'] = e.target.postnr.value;
 	if(e.target.poststed.value != orgData.poststed) data['poststed'] = e.target.poststed.value;
-	if(e.target.leverandor.checked != orgData.leverandor) data['leverandor'] = e.target.leverandor.checked;
+	if(e.target.leverandor.checked != orgData.leverandor) data['leverandor'] = e.target.leverandor.checked ? 1 : 0;
 
 	console.log(data);
 
@@ -247,6 +235,7 @@ elements.editFirma.addEventListener('submit', (e) => {
 	.then(res => {
 		console.log(res);
 		setupFirmaSelector();
-		resetFirma();
+		firmaSelector3.clear();
+		elements.editFirma.reset();
 	}).catch(err => console.log(err));
 });
