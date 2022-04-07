@@ -2,16 +2,15 @@
 <html lang="no">
 	<head>
 		<title>BuSy</title>
-		<!-- <link rel="stylesheet" href="/Busy/style.css"> -->
+		<link rel="stylesheet" href="/Busy/style.css">
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<!-- Keeping for when i am developing further to avoid caching -->
-		<link rel="stylesheet" href="/Busy/style.css?<?=filemtime("/Busy/style.css")?>"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bluzky/nice-select2@2.0.0/dist/css/nice-select2.css">
 		<script src="https://cdn.jsdelivr.net/gh/bluzky/nice-select2@2.0.0/dist/js/nice-select2.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
 		<script src="./script.js" defer></script>
 	</head>
+
 	<body>
 		<header>
 			<div id="title" class="flexAlignCenter">BuSy Prosject</div>
@@ -177,10 +176,10 @@
 
 					Epost
 					<input type="text" name="epost" id="personEditEpost">
-					
+
 					Telefon
 					<input type="text" name="telefon" minlength="8" maxlength="8" id="personEditTelefon">
-					
+
 					Firma
 					<input type="text" name="firma" id="personEditFirma">
 
