@@ -17,7 +17,7 @@
 		return $query;
 	}
 
-	function Query($query) {
+	function Query($query, $json = true) {
 		mysqli_report(MYSQLI_REPORT_STRICT);
 
 		try {
@@ -34,7 +34,7 @@
 						$data[] = $row;
 					}
 	
-					return json_encode($data);
+					return $json ? json_encode($data) : $data;
 				}
 			} catch(Exception $e) {
 				return('Query failed: ' . $e->getMessage());

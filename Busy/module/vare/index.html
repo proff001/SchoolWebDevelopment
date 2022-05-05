@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="no">
 	<head>
-		<title>BuSy | Kontakt modul</title>
+		<title>BuSy | Vare modul</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="/Busy/style.css">
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -11,40 +11,39 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
 		<script src="./script.js" defer></script>
 	</head>
-
 	<body>
 		<header>
 			<div id="title" class="flexAlignCenter">BuSy Prosject</div>
-			<div class="navItem flexAlignCenter"><a href="/Busy/module/vare/">Vare</a></div>
-			<div class="navItem flexAlignCenter active">Kontakt</div>
+			<div class="navItem flexAlignCenter active">Vare</div>
+			<div class="navItem flexAlignCenter"><a href="/Busy/module/kontakt/">Kontakt</a></div>
 			<div class="navItem flexAlignCenter"><a href="/Busy">Hjem</a></div>
 		</header>
 
 		<div id="content" class="flexAlignCenter">
 			<div id="forms">
 				<form class="form" id="lagFirma">
-					<div id="title">Legg til et nytt firma</div>
+					<div id="title">Legg til en ny vare</div>
 
 					Navn
 					<input type="text" name="navn" required>
 
-					Adresse
-					<input type="text" name="adresse" required>
+					Beskrivelse
+					<!-- <textarea name="beskrivelse"></textarea> -->
+					<div contenteditable="true"></div>
 
-					Organisasjonsnummer
-					<input type="text" name="orgnummer" required>
+					Innkjøpspris
+					<input type="text" name="leveringsadresse" required>
+					
+					Min. salgspris
+					<input disabled type="text">
 
-					Leveringsadresse
-					<input type="text" name="leveringsadresse">
-
-					Postnr
+					Salgspris
 					<input type="text" name="postnr" minlength="4" minlength="5" required>
 
-					Poststed
-					<input type="text" name="poststed" required>
-
 					Leverandør
-					<input type="checkbox" name="leverandor">
+					<select name="firma" id="firmaSelector" style="display: none;">
+						<option selected value="0">Velg et firma</option>
+					</select>
 
 					<button type="submit">Legg til firma</button>
 				</form>

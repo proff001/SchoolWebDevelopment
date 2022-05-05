@@ -29,7 +29,8 @@ CREATE TABLE IF NOT EXISTS `produkter` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`navn` VARCHAR(255) NOT NULL,
 	`beskrivelse` VARCHAR(255) NOT NULL,
-	`pris` INT(11) NOT NULL,
+	`prisIn` DOUBLE NOT NULL,
+	`prisUt` DOUBLE NOT NULL,
 	`firma` INT(11) NOT NULL,
 	PRIMARY KEY (`id`),
 	FOREIGN KEY (`firma`) REFERENCES `firmaer`(`id`)

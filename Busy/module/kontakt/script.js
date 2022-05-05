@@ -64,7 +64,7 @@ let personData = {};
 
 const defaultFirmaData = '<option selected value="0">Velg et firma</option>';
 async function setupFirmaSelector() {
-	const res = await axios.post('/Busy/api/getFirma.php');
+	const res = await axios.post('/Busy/api/kontakt/getFirma.php');
 
 	firmaSelector.clear();
 	firmaSelector2.clear();
@@ -95,7 +95,7 @@ async function setupFirmaSelector() {
 
 const defaultPersonData = '<option selected value="0">Velg en person</option>';
 async function setupPersonSelector() {
-	const res = await axios.post('/Busy/api/getPersoner.php');
+	const res = await axios.post('/Busy/api/kontakt/getPersoner.php');
 
 	personSelector.clear();
 
@@ -136,7 +136,7 @@ elements.lagFirma.addEventListener('submit', (e) => {
 
 	if(e.target.leveringsadresse.value.length !== 0) data['leveringsadresse'] = e.target.leveringsadresse.value;
 
-	axios.post('/Busy/api/createFirma.php', data)
+	axios.post('/Busy/api/kontakt/createFirma.php', data)
 	.then(res => {
 		console.log(res);
 		setupFirmaSelector();
@@ -157,7 +157,7 @@ elements.lagPerson.addEventListener('submit', (e) => {
 
 	if(elements.firmaSelector.value !== 0) data['firma'] = elements.firmaSelector.value;
 
-	axios.post('/Busy/api/createPerson.php', data)
+	axios.post('/Busy/api/kontakt/createPerson.php', data)
 	.then(res => {
 		console.log(res);
 		setupPersonSelector();
@@ -183,7 +183,7 @@ elements.firmaDelete.addEventListener('click', (e) => {
 	const id = elements.firmaSelector2.value;
 	if(id == 0 || !firmaData[id]) return;
 
-	axios.post('/Busy/api/deleteFirma.php', { id })
+	axios.post('/Busy/api/kontakt/deleteFirma.php', { id })
 	.then(res => {
 		console.log(res);
 		setupFirmaSelector();
@@ -208,7 +208,7 @@ elements.personDelete.addEventListener('click', (e) => {
 	const id = elements.personSelector.value;
 	if(id == 0 || !personData[id]) return;
 
-	axios.post('/Busy/api/deletePerson.php', { id })
+	axios.post('/Busy/api/kontakt/deletePerson.php', { id })
 	.then(res => {
 		console.log(res);
 		setupPersonSelector();
@@ -253,7 +253,7 @@ elements.editFirma.addEventListener('submit', (e) => {
 
 	if(Object.keys(data).length == 1) return;
 
-	axios.post('/Busy/api/editFirma.php', data)
+	axios.post('/Busy/api/kontakt/editFirma.php', data)
 	.then(res => {
 		console.log(res);
 		setupFirmaSelector();
@@ -301,7 +301,7 @@ elements.editPerson.addEventListener('submit', (e) => {
 
 	if(Object.keys(data).length == 1) return;
 
-	axios.post('/Busy/api/editPerson.php', data)
+	axios.post('/Busy/api/kontakt/editPerson.php', data)
 	.then(res => {
 		console.log(res);
 		setupPersonSelector();

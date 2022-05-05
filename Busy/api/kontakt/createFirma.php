@@ -1,7 +1,7 @@
 <?php
 	if($_SERVER["REQUEST_METHOD"] != "POST") return;
 
-	require './query.php';
+	require '../query.php';
 
 	$json = file_get_contents('php://input');
 	$POST = json_decode($json);
