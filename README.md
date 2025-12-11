@@ -1,2 +1,2 @@
 # SchoolWebDevelopment
-htdocs for 
+Web utvkling Dataelektronikerfaget VG3
